@@ -9,7 +9,6 @@ const index = (request,response) =>{
 
 //创建单个文档
 const store = (request, response) => {
-    console.log("request.body.title", request.body.title)
     const post = new Post({
         title: request.body.title
     })

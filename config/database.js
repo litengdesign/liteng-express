@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const uri = 'mongodb://localhost:27017/expressDB'
 
 const options = {
-   useMongoClient: true 
+  useNewUrlParser: true
 }
 mongoose.Promise = global.Promise
 mongoose

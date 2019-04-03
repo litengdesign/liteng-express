@@ -1,0 +1,8 @@
+.swiper-container {
+    padding: 15px;
+    margin: -15px;
+}
+.swiper {
+    position: relative;
+    width: 100%;
+}
