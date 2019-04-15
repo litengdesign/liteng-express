@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="../public/lib/swiper/css/swiper.min.css">
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="parallax-bg" style="background-image:url('../public/images/productionkm-1600x400.jpg')" data-swiper-parallax="-23%"></div>
+    <div class="swiper-wrapper container">
+        <div class="swiper-slide">
+            <div class="title" data-swiper-parallax="-300">租赁或者购买</div>
+            <div class="subtitle" data-swiper-parallax="-200" style="margin-top:30px;">我们为您选购最合适的</div>
+        </div>
+        <div class="swiper-slide">
+            <div class="title" data-swiper-parallax="-300">交互式屏幕</div>
+            <div class="subtitle" data-swiper-parallax="-200" style="margin-top:30px;">获得最终的图形打印机</div>
+        </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination swiper-pagination-white"></div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-prev swiper-button-white"></div>
+    <div class="swiper-button-next swiper-button-white"></div>
+</div>
+
+
+<!-- Swiper JS -->
+<script src="../public/lib/swiper/js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        speed: 600,
+        parallax: true,
+        loop:true,
+        autoplay:2000,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+</script>

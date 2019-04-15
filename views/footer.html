@@ -1,0 +1,45 @@
+<footer>
+   <div class="container">
+        <div class="f-menu">
+            <ul>
+                <li><b>产品分类</b></li>
+                <% data.categorys.forEach(function(item){ %>
+                <li>
+                    <a href="#"><%=item.name%></a>
+                </li>
+                <% }) %>
+            </ul>
+            <ul>
+                <li><b>品牌列表</b></li>
+                <% data.brands.forEach(function(item){ %>
+                <li>
+                    <a href="#"><%=item.name%></a>
+                </li>
+                <% }) %>
+            </ul>
+            <ul>
+                <li><b>近期促销</b></li>
+                <% data.productsHot.forEach(function(item){ %>
+                <li>
+                    <a href="#"><%=item.name%></a>
+                </li>
+                <% }) %>
+            </ul>
+            <ul>
+                <li><b>关于双成</b></li>
+                <li><a href="http://">加入我们</a></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="pull-right text-right">
+                <li><b>关注双成</b></li>
+                <li><a href="http://">双成微博</a></li>
+                <li><a href="http://">双成公众号</a></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="copyright text-right">
+            <p>@copyright 2019 杭州双成办公设备有限公司</p>
+        </div>
+   </div>
+</footer>

@@ -9,13 +9,14 @@ const schema = new db.Schema({
     name: String,
     thumb: Array,
     description: String,
+    priceMonth: String,
     content: String,
     status: Boolean,
     category: Object,
+    brand: Object,
     isTop: Boolean,
-    createTime: String
 },options)
 
-const post = db.model('posts', schema)
+const product = db.model('product', schema)
 
-module.exports = post
+module.exports = product

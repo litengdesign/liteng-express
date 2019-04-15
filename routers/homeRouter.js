@@ -5,5 +5,5 @@ const homeController = require('../controllers/homeController')
 // api
 router.route('/')
     .get(homeController.index)
-    
+
 module.exports = router; 

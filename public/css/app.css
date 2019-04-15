@@ -1,0 +1,244 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+img{
+    max-width: 100%;
+}
+html,body{
+    font-size: 14px;
+}
+ul{
+    list-style: none;
+}
+ul.horizontal li{
+    display: inline-block;
+}
+a{
+    color: rgba(0,0,0,0.9);
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.text-center{
+    text-align: center
+}
+.text-left{
+    text-align: left
+}
+.text-right{
+    text-align: right
+}
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
+.m-top-20{
+    margin-top: 20px;
+}
+.container{
+    max-width: 1152px;
+    margin: 0 auto;
+}
+.header{
+   background: #fff;
+}
+.top{
+    height: 28px;
+    line-height: 28px;
+    text-align: right;
+}
+.top .phone{
+    padding-left: 50px;
+    text-align: right;
+}
+/* header */
+.logo{
+    height: 56px;
+    padding: 17px 0;
+    text-align: center;
+}
+.logo .logo-content{
+    display: inline-block;
+    width: 406px;
+    height: 65px;
+    margin-top: 20px;
+    background: url('../images/logo.svg') no-repeat;
+    background-size: contain;
+}
+.menu{
+    text-align: center
+}
+.menu li{
+    display: inline-block;
+    margin: 1em 3.8em;
+}
+.menu li a.active{
+    color: #0074F2;
+}
+/* aside  */
+.aside{
+    width: 15%;
+    float: left;
+    padding: 26px 0;
+}
+.aside h2{
+    margin-bottom: 10px;
+    color: #151515;
+    font-size: 18px;
+    font-weight: 700;
+}
+.aside h3{
+    margin: 15px 0;
+    color: #151515;
+    font-size: 14px;
+    font-weight: 500;
+}
+.aside ul li a{
+    display: block;
+    padding-bottom: 10px;
+    font-size: 12px;
+    color: #151515;
+    font-weight: 400;
+}
+/* content */
+.content{
+    width: 85%;
+    float: right;
+    padding: 26px 0;
+}
+.pannel .title{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #151515;
+    margin-bottom: 10px;
+}
+.pannel .title .read-more{
+    float: right;
+    font-size: 12px;
+}
+.pannel .description .read-more{
+    font-size: 12px;
+    font-weight: 400;
+}
+.pannel .description .name{
+    font-size: 13px;
+    color: #151515;
+    line-height: 22px;
+}
+.pannel .list li{
+    display: inline-block;
+    margin-right: 23px;
+}
+.pannel .list li img{
+    max-width: 100%;
+    max-height: 187px;
+}
+.pannel .price{
+    color: #0074F2;
+}
+.pannel .thumb-wrap{
+    text-align: center
+}
+/* swiper */
+.swiper-container {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    background: #000;
+    margin-top: 0;
+}
+.swiper-slide {
+    font-size: 18px;
+    color:#fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 40px 0px;
+}
+.parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130%;
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+.swiper-slide .title {
+    font-size: 41px;
+    font-weight: 300;
+}
+.swiper-slide .subtitle {
+    font-size: 21px;
+}
+.swiper-slide .text {
+    font-size: 14px;
+    max-width: 400px;
+    line-height: 1.3;
+}
+/* 详情页 */
+.content .product-name{
+    font-size: 18px;
+    padding: 10px 0;
+    color: #151515;
+    font-weight: 400;
+}
+/* topList */
+.pannel .topList li{
+    width: 33%;
+    margin: 1em 0;
+}
+.pannel  .topList li .thumb-wrap{
+    width: 50%;
+}
+.pannel  .topList li .description{
+    position: relative;
+    width: 42%;
+    padding: 0 10px;
+    height: 187px;
+    color:rgba(0,0,0,0.6);
+}
+.pannel  .topList li .description .name{
+    margin: 0.5em 0;
+}
+.pannel  .topList li .description .read-more{
+    margin-top: 20px;
+    color:rgba(0,0,0,0.8);
+}
+/* footer */
+footer{
+    clear: both;
+    padding: 30px 0;
+    border-top: 1px solid #D8D8D8;
+}
+.f-menu{
+    width: 100%;
+    float: left;
+}
+footer ul{
+    width: 15%;
+    float: left;
+}
+footer .copyright{
+    padding: 1em 0;
+    clear: both;
+    font-size: 12px;
+    font-weight: lighter;
+    color: #151515;
+}
+footer b{
+    font-weight: 400;
+    font-size: 12px;
+}
+footer a{
+    font-weight: lighter;
+    font-size: 12px;
+    color: #151515;
+    line-height: 22px;
+}

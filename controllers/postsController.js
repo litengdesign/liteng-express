@@ -1,16 +1,31 @@
 //导入数据模型
 const Post = require('../models/posts')
 
-//查询数据列表
+//视图渲染
 const index = (request,response) =>{
     Post.find()
-        .then(documents => response.send(documents))  
+        .then(documents => response.render('posts', { data: documents }))  
 }
 
+//查询数据列表
+const list = (request, response) => {
+    Post.find()
+        .then(documents => response.send({
+            total: documents.length,
+            data: documents
+        }))
+}
 //创建单个文档
 const store = (request, response) => {
     const post = new Post({
-        title: request.body.title
+        name: request.body.name,
+        description: request.body.description,
+        category: request.body.category,
+        thumb: request.body.thumb,
+        content: request.body.content,
+        status: request.body.status,
+        isTop: request.body.isTop,
+        createTime: new Date()
     })
     post.save()
         .then(document => response.send(document))
@@ -30,7 +45,14 @@ const show = (request,response)=>{
 const update = (request,response)=>{
     const id = request.params.id;
     const body = {
-        title: request.body.title
+        name: request.body.name,
+        description: request.body.description,
+        category: request.body.category,
+        thumb: request.body.thumb,
+        content: request.body.content,
+        status: request.body.status,
+        isTop: request.body.isTop,
+        createTime: new Date()
     }
     console.log(body.title)
     Post.findByIdAndUpdate(id,{ $set: body }, {new:true})
@@ -45,6 +67,7 @@ const destroy = (request,response)=>{
 }
 
 module.exports = {
+    list,
     index,
     store,
     show,

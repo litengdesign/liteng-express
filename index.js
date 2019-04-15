@@ -1,17 +1,14 @@
 const express = require('express')
 const app = express()
-const multer = require('multer')
-const upload = multer({ dest: 'uploads/' })
 
-//上传单个文件
-app.post('/profile', upload.single('avatar'), (request, response, next) => {
-    response.send(request.file)
-})
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
+//获取放置在public文件夹下的静态文件,
+app.use(express.static(__dirname + '/src'));
+//设置视图路经
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 
-//上传多个文件
-app.post('/uploads',upload.array('photos',3),(request,response,next)=>{
-    response.send(request.files)
-})
-app.listen(8080,()=>{
-    console.log('localhost:8080')
-})
+app.get('/', (req, res) => res.render('index', { data: { title:'hello'}}))
+
+app.listen(3000, () => console.log('Example app listening on port 3000!'))

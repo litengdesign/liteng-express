@@ -1,6 +1,8 @@
 const User = require('../models/user')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
+const token =  require ('../middlewares/token')
+
 
 //查询用户列表
 const index = (request, response)=>{
@@ -26,20 +28,22 @@ const auth = (request, response) => {
   User.findOne({ userName: request.body.userName})
     .then(user => {
       if (!user) {
-        return Promise.reject({ message: '没找到用户' })
+        return Promise.reject({ status: 400,message: '没找到用户' })
       }
 
       bcrypt.compare(request.body.password, user.password)
         .then(result => {
           if (result) {
             const payload = {
-                exp:1000,
-                userName: user.userName
+              userName: user.userName
             }
-            const secret = 'I_LOVE_LITENG'
-            const token = jwt.sign(payload, secret)
-
-            response.send({ token })
+            const tokenString = token.createToken(payload,18000)
+            response.status(200).send(
+              { 
+                message: '登陆成功',
+                token: tokenString
+              }
+            )
           } else {
             response.status(401).send({ message: '未通过身份验证' })
           }
@@ -50,12 +54,13 @@ const auth = (request, response) => {
 
 //登出
 const logout = (request, response)=>{
-    console.log(token)
+
+  response.send({ status: 200, message: '退出成功' })
     
 }
 
 const me = (request,response)=>{
-   response.send(`hello~ ${request.decoded.userName}`)
+   response.send(`hello~`)
 }
 module.exports = {
     store,
