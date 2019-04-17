@@ -211,6 +211,9 @@ a:hover{
     margin-top: 20px;
     color:rgba(0,0,0,0.8);
 }
+.post-content p{
+    margin-bottom: 1.5em;
+}
 /* footer */
 footer{
     clear: both;
