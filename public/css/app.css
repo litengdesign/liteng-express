@@ -242,3 +242,28 @@ footer a{
     color: #151515;
     line-height: 22px;
 }
+
+/* 移动端css */
+@media screen and (max-width: 375px) {
+    .container{
+        padding: 1em;
+    }
+    .menu li{
+        margin: 1em;
+    }
+    .aside{
+        display: none;
+    }
+    .content{
+        width: 100%;
+    }
+    .pannel .topList li{
+        width: 100%;
+    }
+    footer ul{
+        width: 100%;
+    }
+    footer .text-right{
+        text-align: left
+    }
+}
