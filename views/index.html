@@ -29,7 +29,7 @@
                             <a href="/product/<%=item._id%>">
                                 <div class="thumb-wrap pull-left ">
                                     <% item.thumb.forEach(function(thumb){ %>
-                                    <img src="<%=thumb.url%>" alt="">
+                                    <img src="<%=thumb.url%>" alt="" loading=lazy>
                                     <% }) %>
                                 </div>
                                 <div class="pull-right description">
