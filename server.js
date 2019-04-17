@@ -6,14 +6,11 @@ const app = express();
 
 //设置允许跨域访问该服务.
 app.all('*', function (req, res, next) {
-   // if (req.headers.origin == 'http://admin.hzscbg.com' || req.headers.origin == '127.0.0.1:4000') {
-      res.header('Access-Control-Allow-Origin', '*');
-      // res.header('Access-Control-Allow-Headers', 'localhost:4000');
-      res.header("Access-Control-Allow-Headers", "*");
-      res.header('Access-Control-Allow-Methods', '*');
-      res.header('Access-Control-Allow-Credentials', 'true');
-      next();
-   // }
+   res.header('Access-Control-Allow-Origin', '*');
+   res.header("Access-Control-Allow-Headers", "*");
+   res.header('Access-Control-Allow-Methods', '*');
+   res.header('Access-Control-Allow-Credentials', 'true');
+   next();
 });
 
 //文件上传模块
@@ -52,7 +49,7 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
 //设置端口号
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8090;
 //启动服务
 app.listen(port, () => {
    console.log(`监听端口：${port}`);

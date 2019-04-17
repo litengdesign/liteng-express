@@ -17,11 +17,6 @@
         <!-- 中间内容 -->
         <div class="content">
             <h1 class="product-name"><%=data.content.name%></h1>
-            <div class="pro-thumb">
-                <% data.content.thumb.forEach(function(thumb){ %>
-                <img src="../<%=thumb.url%>" alt="">
-                <% }) %>
-            </div>
             <%-data.content.content%>
         </div>
     </div>

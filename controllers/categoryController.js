@@ -49,7 +49,6 @@ const show = (request, response) => {
 
 //更新文档根据id
 const update = (request, response) => {
-    console.log('222' + request.body.id)
     const id = request.body.id;
     const body = {
         name: request.body.name,

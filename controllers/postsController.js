@@ -1,5 +1,7 @@
 //导入数据模型
 const Post = require('../models/posts')
+const Product = require('../models/products')
+const Category = require('../models/category')
 
 //视图渲染
 const index = (request,response) =>{
@@ -31,12 +33,11 @@ const store = (request, response) => {
         .then(document => response.send(document))
 }
 
-//查找文档根据id
 const show = async (request, response) => {
-    let brands = []; //品牌列表
-    let categorys = []; //分类列表
-    let productsTop = []; //推荐产品
-    let productsHot = []; //热门产品
+    let brands = []; 
+    let categorys = []; 
+    let productsTop = []; 
+    let productsHot = []; 
     Category.find().where('type', 'brand')
         .then(documents => {
             brands = documents
@@ -51,8 +52,13 @@ const show = async (request, response) => {
     Product.find().where('isTop', true).limit(10).then(documents => {
         productsTop = documents
     })
-    const id = request.params.id;
-    Post.findById(id).then(documents => {
+    var objectId = require('mongodb').ObjectId;
+    var _id = objectId(request.params.id);
+    var whereArgs = {
+        _id: _id
+    };
+    Post.findOne(whereArgs).then(documents => {
+        console.log("documents" + documents)
         //返回值给页面
         response.render('post', {
             data: {
@@ -63,6 +69,17 @@ const show = async (request, response) => {
                 categorys: categorys,
             }
         })
+    })
+}
+//查找单个文档
+const findById = (request, response) => {
+    var objectId = require('mongodb').ObjectId;
+    var _id = objectId(request.params.id);
+    var whereArgs = {
+        _id: _id
+    };
+    Post.findOne(whereArgs).then(documents => {
+        response.send(documents)
     })
 }
 //更新文档根据id
@@ -96,5 +113,6 @@ module.exports = {
     store,
     show,
     update,
-    destroy
+    destroy,
+    findById
 }; 
