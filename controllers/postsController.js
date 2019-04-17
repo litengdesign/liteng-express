@@ -32,15 +32,39 @@ const store = (request, response) => {
 }
 
 //查找文档根据id
-const show = (request,response)=>{
+const show = async (request, response) => {
+    let brands = []; //品牌列表
+    let categorys = []; //分类列表
+    let productsTop = []; //推荐产品
+    let productsHot = []; //热门产品
+    Category.find().where('type', 'brand')
+        .then(documents => {
+            brands = documents
+        })
+    Category.find().where('type', 'product')
+        .then(documents => {
+            categorys = documents
+        })
+    Product.find().where('isTop', true).limit(5).then(documents => {
+        productsHot = documents
+    })
+    Product.find().where('isTop', true).limit(10).then(documents => {
+        productsTop = documents
+    })
     const id = request.params.id;
-
-    Post.findById(id)
-      .then(documents =>{
-          response.send(documents)
-      })
+    Post.findById(id).then(documents => {
+        //返回值给页面
+        response.render('post', {
+            data: {
+                content: documents,
+                productsHot: productsHot,
+                productsTop: productsTop,
+                brands: brands,
+                categorys: categorys,
+            }
+        })
+    })
 }
-
 //更新文档根据id
 const update = (request,response)=>{
     const id = request.params.id;
