@@ -244,7 +244,7 @@ footer a{
 }
 
 /* 移动端css */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
     .container{
         padding: 1em;
     }
