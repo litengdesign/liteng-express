@@ -126,6 +126,7 @@ const store = (request, response) => {
         thumb: request.body.thumb,
         content: request.body.content,
         status: request.body.status,
+        isTop: request.body.isTop,
         priceMonth: request.body.priceMonth
     })
     product.save()

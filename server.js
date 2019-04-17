@@ -1,17 +1,19 @@
-import express from 'express';
-import path from 'path';
-import morgan from 'morgan';
-const multer = require('multer')
+const express = require('express')
+// import path from 'path';
+const morgan = require ('morgan');
+const multer = require('multer');
 const app = express();
 
 //设置允许跨域访问该服务.
 app.all('*', function (req, res, next) {
-   res.header('Access-Control-Allow-Origin', 'http://localhost:4000');
-   // res.header('Access-Control-Allow-Headers', '');
-   res.header("Access-Control-Allow-Headers", "*");
-   res.header('Access-Control-Allow-Methods', '*');
-   res.header('Access-Control-Allow-Credentials', 'true');
-   next();
+   // if (req.headers.origin == 'http://admin.hzscbg.com' || req.headers.origin == '127.0.0.1:4000') {
+      res.header('Access-Control-Allow-Origin', '*');
+      // res.header('Access-Control-Allow-Headers', 'localhost:4000');
+      res.header("Access-Control-Allow-Headers", "*");
+      res.header('Access-Control-Allow-Methods', '*');
+      res.header('Access-Control-Allow-Credentials', 'true');
+      next();
+   // }
 });
 
 //文件上传模块
