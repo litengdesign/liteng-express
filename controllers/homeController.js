@@ -24,7 +24,7 @@ const index = (request, response) => {
     Product.find().where('isTop', true).limit(5).then(documents => {
         productsHot = documents
     })
-    Product.find().where('isTop', true).limit(12).then(documents => {
+    Product.find().where('isTop', true).sort({ createTime: -1 }).limit(12).then(documents => {
         //返回值给页面
         response.render('index', {
             data: {
