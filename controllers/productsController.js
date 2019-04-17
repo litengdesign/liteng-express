@@ -59,7 +59,7 @@ const index = async (request,response) =>{
         productsTop = documents
     })
 
-    Product.find().where(queryStr).limit(12).sort({ createTime:-1}).then(documents => {
+    Product.find().where(queryStr).sort({ createTime:-1}).limit(12).then(documents => {
         //返回值给页面
         response.render('productList', {
             data: {
