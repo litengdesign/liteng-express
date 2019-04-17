@@ -59,7 +59,7 @@ const index = async (request,response) =>{
         productsTop = documents
     })
 
-    Product.find().where(queryStr).limit(12).then(documents => {
+    Product.find().where(queryStr).limit(12).sort({ createTime:-1}).then(documents => {
         //返回值给页面
         response.render('productList', {
             data: {
@@ -109,7 +109,7 @@ const show = async (request, response) => {
 }
 //查询数据列表
 const list = (request, response) => {
-    Product.find()
+    Product.find().sort({ createTime: -1 })
         .then(documents => response.send({
             total: documents.length,
             data: documents
@@ -127,7 +127,8 @@ const store = (request, response) => {
         content: request.body.content,
         status: request.body.status,
         isTop: request.body.isTop,
-        priceMonth: request.body.priceMonth
+        priceMonth: request.body.priceMonth,
+        createTime: (new Date()).getTime()
     })
     product.save()
         .then(document => response.send(document))
@@ -146,10 +147,9 @@ const update = (request,response)=>{
         content: request.body.content,
         status: request.body.status,
         isTop: request.body.isTop,
-        priceMonth: request.body.priceMonth
-
+        priceMonth: request.body.priceMonth,
+        createTime: (new Date()).getTime()
     }
-    console.log(body.title)
     Product.findByIdAndUpdate(id,{ $set: body }, {new:true})
         .then(document => response.send(document))
 }

@@ -15,6 +15,7 @@ const schema = new db.Schema({
     category: Object,
     brand: Object,
     isTop: Boolean,
+    createTime: Number
 },options)
 
 const product = db.model('product', schema)

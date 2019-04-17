@@ -5,13 +5,13 @@ const Category = require('../models/category')
 
 //视图渲染
 const index = (request,response) =>{
-    Post.find()
+    Post.find().sort({ createTime: -1})
         .then(documents => response.render('posts', { data: documents }))  
 }
 
 //查询数据列表
 const list = (request, response) => {
-    Post.find()
+    Post.find().sort({ createTime: -1})
         .then(documents => response.send({
             total: documents.length,
             data: documents
@@ -27,7 +27,7 @@ const store = (request, response) => {
         content: request.body.content,
         status: request.body.status,
         isTop: request.body.isTop,
-        createTime: new Date()
+        createTime: (new Date()).getTime()
     })
     post.save()
         .then(document => response.send(document))
@@ -67,6 +67,7 @@ const show = async (request, response) => {
                 productsTop: productsTop,
                 brands: brands,
                 categorys: categorys,
+
             }
         })
     })
@@ -93,7 +94,7 @@ const update = (request,response)=>{
         content: request.body.content,
         status: request.body.status,
         isTop: request.body.isTop,
-        createTime: new Date()
+        createTime: (new Date()).getTime()
     }
     console.log(body.title)
     Post.findByIdAndUpdate(id,{ $set: body }, {new:true})
