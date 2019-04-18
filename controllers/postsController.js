@@ -101,7 +101,7 @@ const update = (request,response)=>{
     var whereArgs = {
         _id: _id
     };
-    Post.update(whereArgs, body)
+    Post.updateOne(whereArgs, body, { new: true })
         .then(document => response.send(document))
 }
 
