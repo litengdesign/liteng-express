@@ -96,7 +96,12 @@ const update = (request,response)=>{
         isTop: request.body.isTop,
         createTime: (new Date()).getTime()
     }
-    Post.save(body)
+    var objectId = require('mongodb').ObjectId;
+    var _id = objectId(request.params.id);
+    var whereArgs = {
+        _id: _id
+    };
+    Post.update(whereArgs,{body}, {new:true})
         .then(document => response.send(document))
 }
 
