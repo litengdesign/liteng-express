@@ -96,8 +96,7 @@ const update = (request,response)=>{
         isTop: request.body.isTop,
         createTime: (new Date()).getTime()
     }
-    console.log(body.title)
-    Post.findByIdAndUpdate(id,{ $set: body }, {new:true})
+    Post.save(body)
         .then(document => response.send(document))
 }
 
