@@ -36,7 +36,12 @@ const store = (request, response) => {
         thumb: request.body.thumb
     })
     category.save()
-        .then(document => response.send(document))
+        .then(document => response.send(
+            {
+                status: 1,
+                message: '新增成功！'
+            }
+        ))
 }
 
 //查找文档根据关键词
@@ -57,14 +62,24 @@ const update = (request, response) => {
         thumb: request.body.thumb
     }
     Category.findByIdAndUpdate(id, { $set: body }, { new: true })
-        .then(document => response.json(document))
+        .then(document => response.send(
+            {
+                status: 1,
+                message: '更新成功！'
+            }
+        ))
 }
 
 //删除文档
 const destroy = (request, response) => {
     const id = request.params.id;
     Category.findByIdAndRemove(id)
-        .then(document => response.send(document))
+        .then(document => response.send(
+            {
+                status: 1,
+                message: '删除成功！'
+            }
+        ))
 }
 
 module.exports = {

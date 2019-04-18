@@ -151,14 +151,24 @@ const update = (request,response)=>{
         createTime: (new Date()).getTime()
     }
     Product.findByIdAndUpdate(id,{ $set: body }, {new:true})
-        .then(document => response.send(document))
+        .then(document => response.send(
+            {
+                status: 1,
+                message: '更新成功！'
+            }
+        ))
 }
 
 //删除文档
 const destroy = (request,response)=>{
     const id = request.body.id;
     Product.findByIdAndRemove(id)
-        .then(document => response.send(document))
+        .then(document => response.send(
+            {
+                status: 1,
+                message: '删除成功！'
+            }
+        ))
 }
 
 module.exports = {
