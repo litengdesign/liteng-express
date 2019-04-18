@@ -84,8 +84,8 @@ const findById = (request, response) => {
     })
 }
 //更新文档根据id
-const update = (request,response)=>{
-    const id = request.params.id;
+const update = (request, response) => {
+    const id = request.body.id;
     const body = {
         name: request.body.name,
         description: request.body.description,
@@ -96,12 +96,7 @@ const update = (request,response)=>{
         isTop: request.body.isTop,
         createTime: (new Date()).getTime()
     }
-    var objectId = require('mongodb').ObjectId;
-    var _id = objectId(request.params.id);
-    var whereArgs = {
-        _id: _id
-    };
-    Post.updateOne(whereArgs, body)
+    Post.findByIdAndUpdate(id, { $set: body }, { new: true })
         .then(document => response.send(document))
 }
 
