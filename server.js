@@ -49,7 +49,7 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
 //设置端口号
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 4200;
 //启动服务
 app.listen(port, () => {
    console.log(`监听端口：${port}`);
