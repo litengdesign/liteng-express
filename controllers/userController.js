@@ -41,7 +41,8 @@ const auth = (request, response) => {
             response.status(200).send(
               { 
                 message: '登陆成功',
-                token: tokenString
+                token: tokenString,
+                status:1
               }
             )
           } else {
