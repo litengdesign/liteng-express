@@ -289,6 +289,15 @@ footer a{
     .pannel .topList li{
         width: 100%;
     }
+    .pannel  .topList.postList li .thumb-wrap{
+        width: 96%;
+    }
+    .pannel  .topList.postList li .description{
+        width: 96%;
+    }
+    .pannel .topList.posts li{
+        width: 100%;
+    }
     footer ul{
         width: 100%;
     }
