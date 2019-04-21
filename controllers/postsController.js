@@ -2,12 +2,33 @@
 const Post = require('../models/posts')
 const Product = require('../models/products')
 const Category = require('../models/category')
-
+let brands = []; //品牌列表
+let categorys = []; //分类列表
+let posts = []; //文章列表
+let productsTop = []; //推荐产品
+let productsHot = []; //热门产品
+let postsTop = [];//推荐文章
 //视图渲染
-const index = (request,response) =>{
-    Post.find().sort({ createTime: -1})
-        .then(documents => response.render('posts', { data: documents }))  
+const index = async (request, response) => {
+    posts = await Post.find().where('category.label', request.query.category).sort({ createTime: -1 }).limit(2)
+    brands = await Category.find().where('type', 'brand');
+    categorys = await Category.find().where('type', 'product');
+    productsHot = await Product.find().where('isTop', true).limit(5);
+    postsTop = await Post.find().where('category.label', '行业新闻').limit(2)
+    productsTop = await Product.find().where('isTop', true).sort({ createTime: -1 }).limit(6);
+    //返回值给页面
+    response.render('postList', {
+        data: {
+            categoryName: request.query.category,
+            posts: posts,
+            productsHot: productsHot,
+            productsTop: productsTop,
+            brands: brands,
+            categorys: categorys,
+        }
+    })
 }
+
 
 //查询数据列表
 const list = (request, response) => {

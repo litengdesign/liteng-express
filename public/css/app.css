@@ -104,10 +104,19 @@ a:hover{
     color: #151515;
     font-weight: 400;
 }
+.aside .brand-list li{
+    float: left;
+    width: 50%;
+    height: 48px;
+    margin-bottom: 1em;
+}
+.aside .brand-list li img{
+    max-width: 100%;
+}
 /* content */
 .content{
     width: 85%;
-    float: right;
+    float: left;
     padding: 26px 0;
 }
 .pannel .title{
@@ -213,6 +222,22 @@ a:hover{
 }
 .post-content p{
     margin-bottom: 1.5em;
+}
+/* posts css */
+.pannel .topList.posts li{
+    width: 48%;
+}
+.pannel .topList.postList li{
+    width: 100%;
+}
+.pannel  .topList.postList li .thumb-wrap{
+    width: 30%;
+}
+.pannel  .topList.postList li .description{
+    width: 66%;
+}
+.ad{
+    margin: 1em 0;
 }
 /* footer */
 footer{

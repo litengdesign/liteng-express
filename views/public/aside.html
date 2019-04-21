@@ -17,10 +17,12 @@
         <% }) %>
     </ul>
     <h3>精选品牌</h3>
-    <ul class="list">
+    <ul class="list brand-list">
         <% data.brands.forEach(function(item){ %>
         <li>
-            <a href="/productList?brand=<%=item.id%>"><%=item.name%></a>
+            <a href="/productList?brand=<%=item.id%>">
+                <img src="<%=item.thumb[0].url%>" alt="">
+            </a>
         </li>
         <% }) %>
     </ul>

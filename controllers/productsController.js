@@ -1,35 +1,13 @@
 //导入数据模型
 const Product = require('../models/products')
 const Category = require('../models/category')
+
 let brands = []; //品牌列表
 let categorys = []; //分类列表
 let productsTop = []; //推荐产品
 let productsHot = []; //热门产品
+let products = []; //产品列表
 
-//获取推荐产品
-async function getProductIsTop() {
-    Product.find().where('status', true).limit(10).then(documents => {
-        return documents
-    })
-}
-//获取热门产品
-async function getProductIsHot() {
-    Product.find().where('status', true).limit(10).then(documents => {
-        return documents
-    })
-}
-//获取所有分类
-async function getCategorys() {
-    Category.find().where('type', 'product').limit(10).then(documents => {
-        return documents
-    })
-}
-//获取所有品牌
-async function getBrands() {
-    Category.find().where('type', 'brand').limit(10).then(documents => {
-        return documents
-    })
-}
 //产品列表视图
 const index = async (request,response) =>{
     //获取参数
@@ -39,72 +17,41 @@ const index = async (request,response) =>{
     } else if (request.query.category){
         queryStr = { 'category.id': request.query.category }
     }
-    let brands = []; //品牌列表
-    let categorys = []; //分类列表
-    let productsTop = []; //推荐产品
-    let productsHot = []; //热门产品
-
-    Category.find().where('type', 'brand')
-        .then(documents => {
-            brands = documents
-        })
-    Category.find().where('type', 'product')
-        .then(documents => {
-            categorys = documents
-        })
-    Product.find().where('isTop', true).limit(5).then(documents => {
-        productsHot = documents
-    })
-    Product.find().where('isTop', true).limit(10).then(documents => {
-        productsTop = documents
-    })
-
-    Product.find().where(queryStr).sort({ createTime:-1}).limit(12).then(documents => {
-        //返回值给页面
-        response.render('productList', {
-            data: {
-                products: documents,
-                productsHot: productsHot,
-                productsTop: productsTop,
-                brands: brands,
-                categorys: categorys,
-            }
-        })
+    brands = await Category.find().where('type', 'brand');
+    categorys = await Category.find().where('type', 'product');
+    productsHot = await Product.find().where('isTop', true).limit(5);
+    productsTop = await Product.find().where('isTop', true).sort({ createTime: -1 }).limit(6);
+    products = await Product.find().where(queryStr).sort({ createTime: -1 });
+    console.log("products" + products)
+    //返回值给页面
+    response.render('productList', {
+        data: {
+            products: products,
+            productsHot: productsHot,
+            productsTop: productsTop,
+            brands: brands,
+            categorys: categorys,
+        }
     })
 }
 
 //查找文档根据id
 const show = async (request, response) => {
-    let brands = []; //品牌列表
-    let categorys = []; //分类列表
-    let productsTop = []; //推荐产品
-    let productsHot = []; //热门产品
-    Category.find().where('type', 'brand')
-        .then(documents => {
-            brands = documents
-        })
-    Category.find().where('type', 'product')
-        .then(documents => {
-            categorys = documents
-        })
-    Product.find().where('isTop', true).limit(5).then(documents => {
-        productsHot = documents
-    })
-    Product.find().where('isTop', true).limit(10).then(documents => {
-        productsTop = documents
-    })
     const id = request.params.id;
-    Product.findById(id).then(documents => {
-        //返回值给页面
-        response.render('product', {
-            data: {
-                productContent: documents,
-                productsHot: productsHot,
-                productsTop: productsTop,
-                brands: brands,
-                categorys: categorys,
-            }
-        })
+    const productContent = await  Product.findById(id);
+    brands = await Category.find().where('type', 'brand');
+    categorys = await Category.find().where('type', 'product');
+    productsHot = await Product.find().where('isTop', true).limit(5);
+    productsTop = await Product.find().where('isTop', true).sort({ createTime: -1 }).limit(6);
+    //返回值给页面
+    response.render('product', {
+        data: {
+            productContent: productContent,
+            productsTop: productsTop,
+            productsHot: productsHot,
+            brands: brands,
+            categorys: categorys,
+        }
     })
 }
 //查询数据列表
