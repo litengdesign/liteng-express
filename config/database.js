@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
-
-// const uri = 'mongodb://localhost:27017/expressDB'
-const uri = 'mongodb://www.hzscbg.com:27017/expressDB'
-
+// const uri = 'mongodb://root:root@localhost:27017/expressDB'
+// const uri = 'mongodb://www.hzscbg.com:27017/expressDB'
+const uri = 'mongodb://root:root@localhost:27017/expressDB'
 const options = {
-  useNewUrlParser: true
+  useNewUrlParser: true,
+  authSource:"admin"
 }
 mongoose.Promise = global.Promise
 mongoose

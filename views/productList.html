@@ -12,18 +12,17 @@
 </head>
 
 <body>
-    <%- include header.html %>
-    <%- include banner.html %>
+    <%- include public/header.html %>
+    <%- include public/banner.html %>
     <div class="container">
         <!-- 左侧列表 -->
-        <%- include aside.html %>
+        <%- include public/aside.html %>
         <!-- 中间内容 -->
         <div class="content">
             <!-- 新品推荐 -->
             <div class="pannel">
                 <h2 class="title">
                     产品列表
-                    <a class="pull-right" style="font-size: 12px;font-weight: 400">帮您选购</a>
                 </h2>
                 <div class="list-wrap">
                     <ul class="list topList">
@@ -55,7 +54,7 @@
             </div>
         </div>
     </div>
-    <%- include footer.html %>
+    <%- include public/footer.html %>
 </body>
 
 </html>
