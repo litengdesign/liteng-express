@@ -47,7 +47,9 @@ const store = (request, response) => {
         content: request.body.content,
         status: request.body.status,
         isTop: request.body.isTop,
+        updateDate: (new Date()).getTime(),
         createTime: (new Date()).getTime(),
+        createTimeStr: (new Date()).getFullYear() + '-' + (parseInt(new Date().getMonth()) + 1) + '-' + (new Date()).getDay()
     })
     post.save()
         .then(document => response.send(
@@ -119,6 +121,7 @@ const update = (request, response) => {
         content: request.body.content,
         status: request.body.status || false,
         isTop: request.body.isTop || false,
+        updateDate: (new Date()).getTime(),
     }
     Post.findByIdAndUpdate(id, { $set: body }, { new: true })
         .then(document => response.send(

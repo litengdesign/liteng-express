@@ -14,6 +14,8 @@ const schema = new db.Schema({
     category: Object,
     isTop: Boolean,
     createTime: Number,
+    createTimeStr:String,
+    updateDate: Number,
 },options)
 
 const post = db.model('posts', schema)

@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../public/lib/swiper/css/swiper.min.css">
 <!-- Swiper -->
 <div class="swiper-container">
-    <div class="parallax-bg" style="background-image:url('../public/images/productionkm-1600x400.jpg')" data-swiper-parallax="-23%"></div>
+    <div class="parallax-bg" style="background-image:url('../public/images/prodkm-1600x400.jpg')" data-swiper-parallax="-23%"></div>
     <div class="swiper-wrapper container">
         <div class="swiper-slide">
             <div class="title" data-swiper-parallax="-300">租赁或者购买</div>
@@ -26,13 +26,10 @@
 <!-- Initialize Swiper -->
 <script>
     var swiper = new Swiper('.swiper-container', {
-        speed: 600,
+        speed: 1000,
         parallax: true,
-        autoplay:2000,
-        autoplay: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
+        autoplay: {
+            delay: 5000,//1秒切换一次
         },
         navigation: {
             nextEl: '.swiper-button-next',
