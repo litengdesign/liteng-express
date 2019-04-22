@@ -5,7 +5,7 @@
                 <li><b>产品分类</b></li>
                 <% data.categorys.forEach(function(item){ %>
                 <li>
-                    <a href="#"><%=item.name%></a>
+                    <a href="/productList?category=<%=item.id%>"><%=item.name%></a>
                 </li>
                 <% }) %>
             </ul>
@@ -13,7 +13,10 @@
                 <li><b>品牌列表</b></li>
                 <% data.brands.forEach(function(item){ %>
                 <li>
-                    <a href="#"><%=item.name%></a>
+                    <a href="/productList?brand=<%=item.id%>">
+                        <img src="<%=item.thumb[0].url%>" alt="">
+                        <p><%=item.name%></p>
+                    </a>
                 </li>
                 <% }) %>
             </ul>
@@ -21,20 +24,20 @@
                 <li><b>近期促销</b></li>
                 <% data.productsHot.forEach(function(item){ %>
                 <li>
-                    <a href="#"><%=item.name%></a>
+                    <a href="/product/<%=item.id%>"><%=item.name%></a>
                 </li>
                 <% }) %>
             </ul>
             <ul>
                 <li><b>关于双成</b></li>
-                <li><a href="http://">加入我们</a></li>
+                <li><a href="#">加入我们</a></li>
                 <li></li>
                 <li></li>
             </ul>
             <ul class="pull-right text-right">
                 <li><b>关注双成</b></li>
-                <li><a href="http://">双成微博</a></li>
-                <li><a href="http://">双成公众号</a></li>
+                <li><a href="#">双成微博</a></li>
+                <li><a href="#">双成公众号</a></li>
                 <li></li>
             </ul>
         </div>
