@@ -246,6 +246,10 @@ a:hover{
 .pannel  .topList.postList li .description{
     width: 66%;
 }
+.createTime{
+    font-size: 12px;
+    opacity: 0.8;
+}
 .ad{
     margin: 1em 0;
 }
