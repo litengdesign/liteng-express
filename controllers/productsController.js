@@ -72,13 +72,18 @@ const store = (request, response) => {
         brand: request.body.brand,
         thumb: request.body.thumb,
         content: request.body.content,
-        status: request.body.status,
-        isTop: request.body.isTop,
+        status: request.body.status || false,
+        isTop: request.body.isTop || false,
         priceMonth: request.body.priceMonth,
         createTime: (new Date()).getTime()
     })
     product.save()
-        .then(document => response.send(document))
+        .then(document => response.send(
+            {
+                status: 1,
+                message: '新增成功！'
+            }
+        ))
 }
 
 
@@ -92,10 +97,9 @@ const update = (request,response)=>{
         brand: request.body.brand,
         thumb: request.body.thumb,
         content: request.body.content,
-        status: request.body.status,
-        isTop: request.body.isTop,
+        status: request.body.status || false,
+        isTop: request.body.isTop || false,
         priceMonth: request.body.priceMonth,
-        createTime: (new Date()).getTime()
     }
     Product.findByIdAndUpdate(id,{ $set: body }, {new:true})
         .then(document => response.send(

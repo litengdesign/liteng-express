@@ -4,6 +4,7 @@ const morgan = require ('morgan');
 const multer = require('multer');
 const app = express();
 
+
 //设置允许跨域访问该服务.
 app.all('*', function (req, res, next) {
    res.header('Access-Control-Allow-Origin', '*');
@@ -15,19 +16,24 @@ app.all('*', function (req, res, next) {
 
 //文件上传模块
 const storage = multer.diskStorage({
-   // destination:'public/uploads/'+new Date().getFullYear() + (new Date().getMonth()+1) + new Date().getDate(),
    destination(req, res, cb) {
       cb(null, 'public/uploads/');
    },
    filename(req, file, cb) {
       const filenameArr = file.originalname.split('.');
-      cb(null, Date.now() + '.' + filenameArr[filenameArr.length - 1]);
+      cb(null, filenameArr[0] + '.' + filenameArr[filenameArr.length - 1]);
    }
 });
 const upload = multer({ storage });
 //文件上传入口
-app.post('/upload', upload.single('file'), (request, response, next) => {
-   response.send(request.file)
+app.post('/upload', upload.single('upload'), (request, response, next) => {
+   response.send(
+      {
+         "uploaded": 1,
+         "fileName": request.file.filename,
+         "url": request.file.path
+      }
+   );
 })
 app.use(morgan('dev'))
 const bodyParser = require('body-parser');
