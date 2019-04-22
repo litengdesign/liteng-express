@@ -13,7 +13,7 @@ const schema = new db.Schema({
     status: Boolean,
     category: Object,
     isTop: Boolean,
-    createTime: Number
+    createTime: Number,
 },options)
 
 const post = db.model('posts', schema)

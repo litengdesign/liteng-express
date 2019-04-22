@@ -7,7 +7,6 @@ let categorys = []; //分类列表
 let posts = []; //文章列表
 let productsTop = []; //推荐产品
 let productsHot = []; //热门产品
-let postsTop = [];//推荐文章
 //视图渲染
 const index = async (request, response) => {
     posts = await Post.find().where('category.label', request.query.category).sort({ createTime: -1 }).limit(2)
@@ -48,10 +47,15 @@ const store = (request, response) => {
         content: request.body.content,
         status: request.body.status,
         isTop: request.body.isTop,
-        createTime: (new Date()).getTime()
+        createTime: (new Date()).getTime(),
     })
     post.save()
-        .then(document => response.send(document))
+        .then(document => response.send(
+            {
+                status: 1,
+                message: '新增成功！'
+            }
+        ))
 }
 
 const show = async (request, response) => {
@@ -109,13 +113,12 @@ const update = (request, response) => {
     const id = request.body.id;
     const body = {
         name: request.body.name,
-        description: request.body.description,
+        description: request.body.description || '',
         category: request.body.category,
         thumb: request.body.thumb,
         content: request.body.content,
-        status: request.body.status,
-        isTop: request.body.isTop,
-        createTime: (new Date()).getTime()
+        status: request.body.status || false,
+        isTop: request.body.isTop || false,
     }
     Post.findByIdAndUpdate(id, { $set: body }, { new: true })
         .then(document => response.send(
