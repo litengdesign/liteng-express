@@ -17,6 +17,7 @@ const schema = new db.Schema({
     code:String,
     minShopping:String,
     useShopping: String,
+    contract: String,
     isTop: Boolean,
     createTime: Number,
 },options)

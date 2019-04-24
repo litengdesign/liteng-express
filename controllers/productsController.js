@@ -95,6 +95,7 @@ const store = (request, response) => {
         code: request.body.code,
         minShopping: request.body.minShopping,
         useShopping: request.body.useShopping,
+        contract: request.body.contract,
         createTime: (new Date()).getTime()
     })
     product.save()
@@ -123,6 +124,7 @@ const update = (request,response)=>{
         code: request.body.code,
         minShopping: request.body.minShopping,
         useShopping: request.body.useShopping,
+        contract: request.body.contract,
     }
     Product.findByIdAndUpdate(id,{ $set: body }, {new:true})
         .then(document => response.send(
