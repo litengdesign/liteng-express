@@ -49,8 +49,9 @@ const productsRouter = require('./routers/productsRouter')
 const postsRouter = require('./routers/postsRouter')
 const userRouter = require('./routers/userRouter')
 const categoryRouter = require('./routers/categoryRouter')
+const menuRouter = require('./routers/menuRouter')
 //客户端视图
-app.use('/', [homeRouter, productsRouter, postsRouter, categoryRouter, userRouter]);
+app.use('/', [homeRouter, productsRouter, postsRouter, categoryRouter, userRouter, menuRouter]);
 
 //设置视图路经
 app.engine('html', require('ejs').renderFile);

@@ -2,28 +2,38 @@
 const Post = require('../models/posts')
 const Product = require('../models/products')
 const Category = require('../models/category')
+const Menu = require('../models/menu');
+
+let menus = []; //导航菜单
 let brands = []; //品牌列表
 let categorys = []; //分类列表
 let posts = []; //文章列表
 let productsTop = []; //推荐产品
 let productsHot = []; //热门产品
+let abouts = []; //关于我们
+let solutions = []; //解决方案
+let news = []; //新闻动态
+
 //视图渲染
 const index = async (request, response) => {
+    menus = await Menu.find().sort({ serial: 1 });
     posts = await Post.find().where('category.label', request.query.category).sort({ createTime: -1 }).limit(2)
     brands = await Category.find().where('type', 'brand');
     categorys = await Category.find().where('type', 'product');
     productsHot = await Product.find().where('isTop', true).limit(5);
-    postsTop = await Post.find().where('category.label', '行业新闻').limit(2)
     productsTop = await Product.find().where('isTop', true).sort({ createTime: -1 }).limit(6);
+    abouts = await Post.find().where('category.label', '关于我们').limit(4);
     //返回值给页面
     response.render('postList', {
         data: {
+            menus: menus,
             categoryName: request.query.category,
             posts: posts,
             productsHot: productsHot,
             productsTop: productsTop,
             brands: brands,
             categorys: categorys,
+            abouts: abouts,
         }
     })
 }
@@ -65,38 +75,33 @@ const show = async (request, response) => {
     let categorys = []; 
     let productsTop = []; 
     let productsHot = []; 
-    Category.find().where('type', 'brand')
-        .then(documents => {
-            brands = documents
-        })
-    Category.find().where('type', 'product')
-        .then(documents => {
-            categorys = documents
-        })
-    Product.find().where('isTop', true).limit(5).then(documents => {
-        productsHot = documents
-    })
-    Product.find().where('isTop', true).limit(10).then(documents => {
-        productsTop = documents
-    })
     var objectId = require('mongodb').ObjectId;
     var _id = objectId(request.params.id);
     var whereArgs = {
         _id: _id
     };
-    Post.findOne(whereArgs).then(documents => {
-        console.log("documents" + documents)
-        //返回值给页面
-        response.render('post', {
-            data: {
-                content: documents,
-                productsHot: productsHot,
-                productsTop: productsTop,
-                brands: brands,
-                categorys: categorys,
-
-            }
-        })
+   menus = await Menu.find().sort({ serial: 1 });
+    brands = await Category.find().where('type', 'brand');
+    categorys = await Category.find().where('type', 'product');
+    productsHot = await Product.find().where('isTop', true).limit(5);
+    productsTop = await Product.find().where('isTop', true).sort({ createTime: -1 }).limit(6);
+    abouts = await Post.find().where('category.label', '关于我们').limit(4);
+    solutions = await Post.find().where('category.label', '解决方案').limit(5);
+    news = await Post.find().where('category.label', '新闻中心').limit(5);
+    const content = await Post.findOne(whereArgs);
+    //返回值给页面
+    response.render('post', {
+        data: {
+            menus: menus,
+            content: content,
+            productsHot: productsHot,
+            productsTop: productsTop,
+            brands: brands,
+            categorys: categorys,
+            abouts: abouts,
+            solutions: solutions,
+            news: news,
+        }
     })
 }
 //查找单个文档

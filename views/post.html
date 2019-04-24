@@ -14,12 +14,15 @@
     <%- include public/banner-article.html %>
     <div class="container">
         <!-- 左侧列表 -->
-        <%- include public/aside.html %>
+        <%- include public/article-aside.html %>
         <!-- 中间内容 -->
         <div class="content page-content">
-            <h1 class="product-name"><%=data.content.name%></h1>
-            <%-data.content.content%>
+            <div class="content-wrap">
+                <h1 class="product-name"><%=data.content.name%></h1>
+                <%-data.content.content%>
+            </div>
         </div>
+        <%- include public/aside.html %>
     </div>
     <%- include public/footer.html %>
 </body>

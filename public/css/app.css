@@ -39,6 +39,9 @@ a:hover{
 .m-top-20{
     margin-top: 20px;
 }
+.clearfix{
+    clear: both;
+}
 .container{
     max-width: 1152px;
     margin: 0 auto;
@@ -80,7 +83,7 @@ a:hover{
 }
 .menu li{
     display: inline-block;
-    margin: 1em 3.8em;
+    margin: 10px 3.8em;
 }
 .menu li a.active{
     color: #0074F2;
@@ -127,7 +130,13 @@ a:hover{
     padding: 26px 0;
 }
 .page-content{
-    width: 650px;
+    width: 70%;
+}
+.content-wrap{
+    padding: 0 2em;
+}
+.content-wrap p{
+    line-height: 2;
 }
 .pannel .title{
     width: 100%;
@@ -210,6 +219,8 @@ a:hover{
     padding: 10px 0;
     color: #151515;
     font-weight: 400;
+    border-bottom:1px solid rgb(238, 238, 238);
+    margin-bottom: 1em;
 }
 /* topList */
 .pannel .topList li{
@@ -236,6 +247,39 @@ a:hover{
 .post-content p{
     margin-bottom: 1.5em;
 }
+/* 内容详情css */
+.product-info{
+    width:100%;
+    float: left;
+    margin-bottom: 2em;
+}
+.pro-thumb{
+    width: 48%;
+    float: left;
+    border:1px solid rgb(238,238,238);
+    border-radius: 3px;
+}
+.product-options{
+    width: 48%;
+    float: right;  
+}
+.product-options .description,
+.product-options .option,
+.product-options .price{
+    padding: 10px;
+    background-color: rgb(244,244,244);
+    color:rgb(80,80,80);
+    margin-bottom: 1em;
+}
+.product-options .price a{
+    background-color: rgb(68, 67, 73);
+    color: #fff;
+    border-radius: 3px;
+    line-height: 40px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
 /* posts css */
 .pannel .topList.posts li{
     width: 48%;
@@ -260,7 +304,7 @@ a:hover{
 footer{
     clear: both;
     padding: 30px 0;
-    border-top: 1px solid #D8D8D8;
+    border-top: 2px solid #cf142b;
     color: #fff;
     background: #383838;
 }

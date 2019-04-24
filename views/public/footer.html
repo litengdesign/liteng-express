@@ -29,9 +29,11 @@
             </ul>
             <ul>
                 <li><b>关于双成</b></li>
-                <li><a href="#">加入我们</a></li>
-                <li></li>
-                <li></li>
+                <% data.abouts.forEach(function(item){ %>
+                <li>
+                    <a href="/post/<%=item.id%>"><%=item.name%></a>
+                </li>
+                <% }) %>
             </ul>
             <ul class="pull-right text-right">
                 <li><b>关注双成</b></li>

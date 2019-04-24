@@ -13,7 +13,6 @@ const index = (request, response) => {
 }  
 //查询数据列表
 const list = (request, response) => {
-    console.log('11' + request.query.type)
     Category.find().where('type', request.query.type)
         .then(documents => response.send(
            {

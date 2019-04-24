@@ -14,10 +14,9 @@
     <div class="menu">
         <div class="container">
             <ul>
-                <li><a href="/">首页</a></li>
-                <li><a href="/productList">打印机&复印机</a></li>
-                <li><a href="/postList?category=解决方案">解决方案</a></li>
-                <li><a href="/post/5cb686d186a93a0d820c4c5c">关于我们</a></li>
+                <% data.menus.forEach(function(item){ %>
+                <li><a href="<%=item.link%>"><%=item.name%></a></li>
+                <% }) %>
             </ul>
         </div>
     </div>

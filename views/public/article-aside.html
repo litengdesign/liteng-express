@@ -1,0 +1,19 @@
+
+<div class="aside">
+    <h3>解决方案</h3>
+    <ul class="list">
+        <% data.solutions.forEach(function(item){ %>
+        <li>
+            <a href="/post/<%=item.id%>"><%=item.name%></a>
+        </li>
+        <% }) %>
+    </ul>
+    <h3>新闻中心</h3>
+    <ul class="list">
+        <% data.news.forEach(function(item){ %>
+        <li>
+            <a href="/post?category=<%=item.id%>"><%=item.name%></a>
+        </li>
+        <% }) %>
+    </ul>
+</div>

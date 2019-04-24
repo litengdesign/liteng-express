@@ -14,8 +14,11 @@ const schema = new db.Schema({
     status: Boolean,
     category: Object,
     brand: Object,
+    code:String,
+    minShopping:String,
+    useShopping: String,
     isTop: Boolean,
-    createTime: Number
+    createTime: Number,
 },options)
 
 const product = db.model('product', schema)
