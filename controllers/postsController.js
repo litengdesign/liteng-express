@@ -17,7 +17,7 @@ let news = []; //新闻动态
 //视图渲染
 const index = async (request, response) => {
     menus = await Menu.find().sort({ serial: 1 });
-    posts = await Post.find().where('category.label', request.query.category).sort({ createTime: -1 }).limit(2)
+    posts = await Post.find().where('category.label', request.query.category).sort({ createTime: -1 });
     brands = await Category.find().where('type', 'brand');
     categorys = await Category.find().where('type', 'product');
     productsHot = await Product.find().where('isTop', true).limit(5);
