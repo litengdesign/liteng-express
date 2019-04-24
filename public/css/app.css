@@ -364,9 +364,69 @@ footer a{
         width: 100%;
     }
     footer ul{
-        width: 100%;
+        width: 50%;
+        margin-bottom: 1em;
     }
     footer .text-right{
         text-align: left
+    }
+    .swiper-container{
+        height: 150px;
+    }
+    .logo{
+        display: inline-block;
+        height: 30px;
+        padding: 5px 0;
+        text-align: center;
+        width: 200px;
+    }
+    .mobile-icon-nav{
+        float: right;
+        width: 24px;
+        height: 30px;
+        padding: 10px 0;
+    }
+    .mobile-icon-nav i{
+        width: 24px;
+        height: 24px;
+        background: url(../images/menu.png) no-repeat center;
+        display: inline-block;
+        background-size: cover;
+        vertical-align: middle;
+    }
+    .menu{
+        padding: 0;
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 96px;
+        z-index: 100;
+    }
+    .menu .container{
+        padding: 0;
+    }
+    .menu li{
+        margin: 0;
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .menu li a{
+        padding: 1em 0;
+        display: block;
+        width: 100%;        
+    }
+    .menu li:last-child{
+        border-bottom: 1px solid transparent;
+    }
+    .swiper-slide .title{
+        font-size: 18px;
+    }
+    .swiper-slide .subtitle{
+        font-size: 16px;
+    }
+    .swiper-slide{
+        padding: 20px;
+
     }
 }
