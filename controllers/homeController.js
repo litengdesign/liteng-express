@@ -17,7 +17,7 @@ const index = async(request, response) => {
     brands = await Category.find().where('type', 'brand');
     categorys = await Category.find().where('type', 'product');
     productsHot = await Product.find().where('isTop', true).limit(5);
-    postsTop = await Post.find().where('category.label', '行业新闻').limit(2);
+    postsTop = await Post.find().where('category.label', '新闻中心').limit(2);
     abouts = await Post.find().where('category.label', '关于我们').limit(4);
     productsTop = await Product.find().where('isTop', true).sort({ createTime: -1 }).limit(6);
     console.log(menus)
