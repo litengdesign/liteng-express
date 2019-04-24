@@ -429,4 +429,15 @@ footer a{
         padding: 20px;
 
     }
+    .pro-thumb{
+        width: 100%;
+        float: left;
+        border:1px solid rgb(238,238,238);
+        border-radius: 3px;
+    }
+    .product-options{
+        margin-top: 1em;
+        width: 100%;
+        float: right;  
+    }
 }
