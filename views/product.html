@@ -21,7 +21,7 @@
             <h1 class="product-name"><%=data.productContent.name%></h1>
             <div class="pro-thumb">
                 <% data.productContent.thumb.forEach(function(thumb){ %>
-                <img src="../<%=thumb.url%>" alt="">
+                <img src="<%=thumb.url%>" alt="">
                 <% }) %>
             </div>
             <%-data.productContent.content%>
