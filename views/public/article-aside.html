@@ -12,7 +12,7 @@
     <ul class="list">
         <% data.news.forEach(function(item){ %>
         <li>
-            <a href="/post?category=<%=item.id%>"><%=item.name%></a>
+            <a href="/post/<%=item.id%>"><%=item.name%></a>
         </li>
         <% }) %>
     </ul>
