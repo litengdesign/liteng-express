@@ -228,11 +228,11 @@ a:hover{
     margin: 1em 0;
 }
 .pannel  .topList li .thumb-wrap{
-    width: 50%;
+    width: 40%;
 }
 .pannel  .topList li .description{
     position: relative;
-    width: 42%;
+    width: 53%;
     padding: 0 10px;
     height: 187px;
     color:rgba(0,0,0,0.6);
@@ -246,6 +246,9 @@ a:hover{
 }
 .post-content p{
     margin-bottom: 1.5em;
+}
+.pannel .desc{
+    font-size: 12px;
 }
 /* 内容详情css */
 .product-info{
