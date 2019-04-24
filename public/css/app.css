@@ -122,9 +122,12 @@ a:hover{
 }
 /* content */
 .content{
-    width: 650px;
+    width: 85%;
     float: left;
     padding: 26px 0;
+}
+.page-content{
+    width: 650px;
 }
 .pannel .title{
     width: 100%;
