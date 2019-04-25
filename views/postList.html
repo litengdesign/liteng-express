@@ -27,22 +27,22 @@
                     <ul class="list topList postList">
                         <% data.posts.forEach(function(item){ %>
                         <li>
-                            <a href="/post/<%=item._id%>">
+                            <a href="/product/<%=item._id%>">
                                 <div class="thumb-wrap pull-left ">
                                     <% item.thumb.forEach(function(thumb){ %>
-                                    <img src="<%=thumb.url%>" alt="">
+                                    <img src="<%=thumb.url%>" alt="" loading=lazy>
                                     <% }) %>
                                 </div>
                                 <div class="pull-right description">
+                                    <p class="price"><%=item.priceMonth%>/月</p>
                                     <p class="name">
                                         <%=item.name%>
                                     </p>
-                                    <p class="desc">
-                                        <%=item.description%>
-                                    </p>
-                                    <p class="createTime">
-                                        <%=item.createTimeStr%>
-                                    </p>
+                                    <div class="desc">
+                                        <p><span>包含：</span><%=item.minShopping%></p>
+                                        <p><span>超出：</span><%=item.useShopping%></p>
+                                        <p><span>合同期：</span><%=item.contract%></p>
+                                    </div>
                                     <p class="read-more">
                                         查看详情
                                     </p>
