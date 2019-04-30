@@ -123,6 +123,13 @@ a:hover{
     max-width: 80%;
     height: 40px;
 }
+.aside .concact li span{
+    display: block;
+    margin-bottom: 2px;
+}
+.aside .concact li{
+    margin-bottom: 5px;
+}
 /* content */
 .content{
     width: 85%;
