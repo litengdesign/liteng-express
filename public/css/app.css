@@ -447,4 +447,18 @@ footer a{
         width: 100%;
         float: right;  
     }
+    .pannel .topList li .description{
+        text-align: center;
+    }
+    .pannel .topList li .thumb-wrap{
+        width: 100%;
+    }
+    .pannel .topList li .description {
+        position: relative;
+        width: 100%;
+        padding: 0 1%;
+        height: auto;
+        color: rgba(0,0,0,0.6);
+        text-align: center;
+    }
 }
