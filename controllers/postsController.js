@@ -86,8 +86,8 @@ const show = async (request, response) => {
     productsHot = await Product.find().where('isTop', true).limit(5);
     productsTop = await Product.find().where('isTop', true).sort({ createTime: -1 }).limit(6);
     abouts = await Post.find().where('category.label', '关于我们').limit(4);
-    solutions = await Post.find().where('category.label', '解决方案').limit(5);
-    news = await Post.find().where('category.label', '新闻中心').limit(5);
+    solutions = await Post.find().where('category.label', '解决方案').sort({ createTime: -1 }).limit(5);
+    news = await Post.find().where('category.label', '新闻中心').sort({ createTime: -1 }).limit(5);
     const content = await Post.findOne(whereArgs);
     //返回值给页面
     response.render('post', {

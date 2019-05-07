@@ -35,7 +35,7 @@
                                     <% }) %>
                                 </div>
                                 <div class="pull-right description">
-                                    <p class="price"><%=item.priceMonth%>/月</p>
+                                    <p class="price">¥<%=item.priceMonth%>元/月</p>
                                     <p class="name">
                                         <%=item.name%>
                                     </p>
@@ -49,6 +49,11 @@
                                     </p>
                                 </div>
                             </a>
+                            <% if (item.category.label=="办公型（彩色）"){ %>
+                               <i class="pro-color colors" title="彩色"></i>
+                            <%}else{%>
+                                <i class="pro-color black" title="黑白"></i>
+                            <% } %>
                         </li>
                         <% }) %>
                     </ul>

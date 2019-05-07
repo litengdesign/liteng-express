@@ -116,28 +116,34 @@ a:hover{
 .aside .brand-list li{
     float: left;
     width: 100%;
-    height: 68px;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 .aside .brand-list li img{
     max-width: 80%;
     height: 40px;
 }
 .aside .concact li span{
-    display: block;
+    display: inline-block;
+    width: 36px;
     margin-bottom: 2px;
 }
 .aside .concact li{
     margin-bottom: 5px;
+    padding-right: 5px;
+    font-size: 12px;
+}
+.aside .concact li a{
+    display: inline-block;
+    padding-bottom: 0;
 }
 /* content */
 .content{
-    width: 85%;
+    width: 83%;
     float: left;
-    padding: 26px 0;
+    padding: 26px 1%;
 }
 .page-content{
-    width: 70%;
+    width: 68%;
 }
 .content-wrap{
     padding: 0 2em;
@@ -166,18 +172,37 @@ a:hover{
     line-height: 22px;
 }
 .pannel .list li{
+    position: relative;
     display: inline-block;
     margin-right: 23px;
 }
 .pannel .list li img{
-    max-width: 100%;
+    max-width: 98%;
     max-height: 187px;
 }
 .pannel .price{
-    color: #0074F2;
+    color: #cf142b;
+    font-weight: bold;
 }
 .pannel .thumb-wrap{
-    text-align: center
+    text-align: left;
+}
+.pro-color{
+    position: absolute;
+    display: inline-block;
+    border-radius: 12px;
+    right: 10px;
+    top: 0px;
+    opacity: 0.7;
+    width: 12px;
+}
+.colors{
+    border-top: 6px solid red;
+    border-bottom: 6px solid blue;
+}
+.black{
+    border-top: 6px solid black;
+    border-bottom: 6px solid gray;
 }
 /* swiper */
 .swiper-container {
@@ -264,7 +289,8 @@ a:hover{
     margin-bottom: 2em;
 }
 .pro-thumb{
-    width: 48%;
+    width: 46%;
+    padding: 1%;
     float: left;
     border:1px solid rgb(238,238,238);
     border-radius: 3px;
@@ -292,7 +318,7 @@ a:hover{
 }
 /* posts css */
 .pannel .topList.posts li{
-    width: 48%;
+    width: 49%;
 }
 .pannel .topList.postList li{
     width: 100%;

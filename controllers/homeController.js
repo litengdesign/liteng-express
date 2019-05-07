@@ -19,7 +19,7 @@ const index = async(request, response) => {
     productsHot = await Product.find().where('isTop', true).limit(5);
     postsTop = await Post.find().where('category.label', '新闻中心').sort({ createTime: -1 }).limit(2);
     abouts = await Post.find().where('category.label', '关于我们').limit(4);
-    productsTop = await Product.find().where('isTop', true).sort({ createTime: -1 }).limit(6);
+    productsTop = await Product.find().where('isTop', true).sort({ createTime: -1 }).limit(9);
     console.log(menus)
     //返回值给页面
     response.render('index', {
