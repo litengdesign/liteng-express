@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="360-site-verification" content="b8a5ce0a3940b7f00db1ae8b3ef3aca1" />
+    <title>富阳复印机租赁创新者-杭州双成办公</title>
+    <meta name="keywords" content="杭州理光复印机代理商|杭州理光打印机租赁|富阳理光复印机租赁|杭州理光打印机维修|杭州打印机耗材批发">
+    <meta name="description" content="杭州双成办公设备有限公司专业提供复印机租赁,打印机租赁,复合机租赁,办公耗材及设备销售和维修服务。咨询电话:18989478911">
+</head>
+<body>
+    <%- include public/header.html %>
+    <%- include public/banner.html %>
+    <div class="container">
+        <!-- 左侧列表 -->
+        <%- include public/aside.html %>
+        <!-- 中间内容 -->
+        <div class="content">
+            <!-- 新品推荐 -->
+            <div class="pannel">
+                <h2 class="title">
+                    租赁套餐
+                    <a href="/productList" class="read-more">查看全部</a>
+                </h2>
+                <div class="list-wrap">
+                    <ul class="list topList">
+                        <% data.productsTop.forEach(function(item){ %>
+                        <li>
+                            <a href="/product/<%=item._id%>">
+                                <div class="thumb-wrap pull-left ">
+                                    <% item.thumb.forEach(function(thumb){ %>
+                                    <img src="<%=thumb.url%>" alt="" loading=lazy>
+                                    <% }) %>
+                                </div>
+                                <div class="pull-right description">
+                                    <p class="price">¥<%=item.priceMonth%>元/月</p>
+                                    <p class="name">
+                                        <%=item.name%>
+                                    </p>
+                                    <div class="desc">
+                                        <p><span>包含：</span><%=item.minShopping%></p>
+                                        <p><span>超出：</span><%=item.useShopping%></p>
+                                        <p><span>合同期：</span><%=item.contract%></p>
+                                    </div>
+                                    <p class="read-more">
+                                        查看详情
+                                    </p>
+                                </div>
+                            </a>
+                            <% if (item.category.label=="办公型（彩色）"){ %>
+                               <i class="pro-color colors" title="彩色"></i>
+                            <%}else{%>
+                                <i class="pro-color black" title="黑白"></i>
+                            <% } %>
+                        </li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+            <!-- 广告1 -->
+            <div class="ad">
+                <img src="../public/images/ad1.jpg" alt="">
+            </div>
+            <!-- 文章新闻 -->
+            <div class="pannel">
+                <h2 class="title">
+                    新闻中心
+                    <a href="/postList?category=新闻中心" class="read-more">查看全部</a>
+                </h2>
+                <ul class="list topList posts">
+                    <% data.postsTop.forEach(function(item){ %>
+                    <li>
+                        <a href="/post/<%=item._id%>">
+                            <div class="thumb-wrap pull-left ">
+                                <% item.thumb.forEach(function(thumb){ %>
+                                <img src="<%=thumb.url%>" alt="" loading=lazy>
+                                <% }) %>
+                            </div>
+                            <div class="pull-right description">
+                                <h3 style="margin-bottom: 0.6em">
+                                    <%=item.name%>
+                                </h3>
+                                <%=item.description%>
+                                <p class="createTime">
+                                    <%=item.createTimeStr%>
+                                </p>
+                                <p class="read-more">
+                                    查看详情
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <%})%>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <%- include public/footer.html %>
+</body>
+</html>

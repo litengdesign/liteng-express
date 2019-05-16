@@ -1,10 +1,10 @@
 const express = require('express')
-// import path from 'path';
+const path = require('path');
 const morgan = require ('morgan');
 const multer = require('multer');
 const app = express();
-const origin = 'http://www.hzscbg.com/';
-// const origin = 'http://localhost:4200/';
+// const origin = 'http://www.hzscbg.com/';
+const origin = 'http://localhost:4200/';
 
 
 //设置允许跨域访问该服务.
@@ -15,7 +15,6 @@ app.all('*', function (req, res, next) {
    res.header('Access-Control-Allow-Credentials', 'true');
    next();
 });
-
 //文件上传模块
 const storage = multer.diskStorage({
    destination(req, res, cb) {
@@ -54,6 +53,7 @@ const menuRouter = require('./routers/menuRouter')
 app.use('/', [homeRouter, productsRouter, postsRouter, categoryRouter, userRouter, menuRouter]);
 
 //设置视图路经
+app.set('views', path.join(__dirname, 'views/hz-ricoh.com'))
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 

@@ -1,0 +1,72 @@
+<footer>
+   <div class="container">
+        <div class="f-menu">
+            <ul>
+                <li><b>产品分类</b></li>
+                <% data.categorys.forEach(function(item){ %>
+                <li>
+                    <a href="/productList?category=<%=item.id%>"><%=item.name%></a>
+                </li>
+                <% }) %>
+            </ul>
+            <ul>
+                <li><b>品牌列表</b></li>
+                <% data.brands.forEach(function(item){ %>
+                <li>
+                    <a href="/productList?brand=<%=item.id%>">
+                        <p><%=item.name%></p>
+                    </a>
+                </li>
+                <% }) %>
+            </ul>
+            <ul>
+                <li><b>近期促销</b></li>
+                <% data.productsHot.forEach(function(item){ %>
+                <li>
+                    <a href="/product/<%=item.id%>"><%=item.name%></a>
+                </li>
+                <% }) %>
+            </ul>
+            <ul>
+                <li><b>关于双成</b></li>
+                <% data.abouts.forEach(function(item){ %>
+                <li>
+                    <a href="/post/<%=item.id%>"><%=item.name%></a>
+                </li>
+                <% }) %>
+            </ul>
+            <ul class="pull-right text-right">
+                <li><b>关注双成</b></li>
+                <li><a href="#">双成微博</a></li>
+                <li><a href="#">双成公众号</a></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="copyright text-right">
+            <p>
+                <span class="text-right">
+                    地址：杭州市富阳区富春街道双城路47号  
+                    
+                </span>
+                <span class="pull-left">@copyright 2019 杭州双成办公设备有限公司</span>
+                <span class="pull-left">--浙ICP备19013642号</span>
+            </p>
+        </div>
+   </div>
+</footer>
+<script>
+    document.getElementById("mobile-icon-nav").onclick=()=>{
+        if (document.getElementById("menu").style.display == 'none' || document.getElementById("menu").style.display == '') {
+            document.getElementById("menu").style.display = 'block'
+        } else {
+            document.getElementById("menu").style.display = 'none'
+        }
+    }
+    var _hmt = _hmt || [];
+    (function() {
+    var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c6cc07c5c5fa36f86e9a045961a1e852";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+</script>

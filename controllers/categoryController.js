@@ -1,5 +1,6 @@
 //导入数据模型
 const Category = require('../models/category')
+
 //查询数据列表
 const index = (request, response) => {
     Product.find()

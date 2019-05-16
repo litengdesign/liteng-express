@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%=data.productContent.name%></title>
+    <meta name="keywords" content="杭州理光复印机代理商|杭州理光打印机租赁|富阳理光复印机租赁|杭州公共设备租赁">
+    <meta name="description" content="杭州双成办公设备有限公司专业提供复印机租赁,打印机租赁,复合机租赁,办公耗材及设备销售和维修服务。咨询电话:18989478911">
+</head>
+
+<body>
+    <%- include public/header.html %>
+    <%- include public/banner-article.html %>
+    <div class="container">
+        <!-- 左侧列表 -->
+        <%- include public/aside.html %>
+        <!-- 中间内容 -->
+        <div class="content page-content">
+            <div class="content-wrap">
+                <h1 class="product-name"><%=data.productContent.name%></h1>
+                <div class="product-info">
+                    <div class="pro-thumb">
+                        <% data.productContent.thumb.forEach(function(thumb){ %>
+                        <img src="<%=thumb.url%>" alt="">
+                        <% }) %>
+                    </div>
+                    <div class="product-options">
+                        <ul class="description">
+                            <li>
+                                <span>所属品牌：</span><a href="/productList?brand=<%=data.productContent.brand.id%>" style="color: #339db9"><%=data.productContent.brand.label%></a>
+                            </li>
+                            <li>
+                                <span>产品型号：</span><%=data.productContent.code%>
+                            </li>
+                        </ul>
+                        <ul class="option">
+                            <li>
+                                <span>保底消费：</span><%=data.productContent.minShopping%>
+                            </li>
+                            <li>
+                                <span>使用费用：</span><%=data.productContent.useShopping%>
+                            </li>
+                        </ul>
+                        <div class="price">
+                            <a href="tel:18989478911">咨询详情</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <h3>产品详情</h3>
+                <%-data.productContent.content%>
+            </div>
+        </div>
+        <%- include public/article-aside.html %>
+    </div>
+    <%- include public/footer.html %>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>产品列表</title>
+    <meta name="keywords" content="杭州理光复印机代理商|杭州理光打印机租赁|富阳理光复印机租赁|杭州公共设备租赁">
+    <meta name="description" content="杭州双成办公设备有限公司专业提供复印机租赁,打印机租赁,复合机租赁,办公耗材及设备销售和维修服务。咨询电话:18989478911">
+</head>
+<body>
+    <%- include public/header.html %>
+    <%- include public/banner-article.html %>
+    <div class="container">
+            <!-- 新品推荐 -->
+            <div class="pannel">
+                <h2 class="title">
+                    产品列表
+                </h2>
+            <div class="pro-list">
+                <ul class="list">
+                    <% data.productsTop.forEach(function(item){ %>
+                    <li>
+                        <a href="/product/<%=item._id%>">
+                            <div class="thumb-wrap text-center">
+                                <% item.thumb.forEach(function(thumb){ %>
+                                <img src="<%=thumb.url%>" alt="" loading=lazy>
+                                <% }) %>
+                            </div>
+                            <div class="description">
+                                <p class="price">¥<%=item.priceMonth%>元/月</p>
+                                <p class="name">
+                                    <span>设备型号：</span><%=item.name%>
+                                </p>
+                                <div class="desc">
+                                    <p><span>合同包含：</span><%=item.minShopping%></p>
+                                    <p><span>纸张超出：</span><%=item.useShopping%></p>
+                                    <p><span>合同期：</span><%=item.contract%></p>
+                                </div>
+                                <button class="btn read-more">查看详情</button>
+                            </div>
+                        </a>
+                        <% if (item.category.label=="办公型（彩色）"){ %>
+                        <i class="pro-color colors" title="彩色"></i>
+                        <%}else{%>
+                        <i class="pro-color black" title="黑白"></i>
+                        <% } %>
+                    </li>
+                    <% }) %>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <%- include public/footer.html %>
+</body>
+
+</html>

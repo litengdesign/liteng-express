@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%=data.content.name%></title>
+    <meta name="keywords" content="杭州理光复印机代理商|杭州理光打印机租赁|富阳理光复印机租赁|杭州公共设备租赁">
+    <meta name="description" content="杭州双成办公设备有限公司专业提供复印机租赁,打印机租赁,复合机租赁,办公耗材及设备销售和维修服务。咨询电话:18989478911">
+</head>
+
+<body>
+    <%- include public/header.html %>
+    <%- include public/banner-article.html %>
+    <div class="container">
+        <!-- 左侧列表 -->
+        <%- include public/article-aside.html %>
+        <!-- 中间内容 -->
+        <div class="content page-content">
+            <div class="content-wrap">
+                <h1 class="product-name">
+                    <%=data.content.name%>
+                    <span class="createDate pull-right" style="font-size: 12px;color: gray"><%=data.content.createTimeStr%></span>
+                </h1>
+                <%-data.content.content%>
+            </div>
+        </div>
+        <%- include public/aside.html %>
+    </div>
+    <%- include public/footer.html %>
+</body>
+
+</html>

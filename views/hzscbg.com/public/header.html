@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="../public/theme/hzscbg/css/app.css">
+<header>
+    <div class="container">
+        <div class="top">
+            <span class="phone">联系电话：<a href="tel:18989478911">189 8947 8911</a></span>
+        </div>
+        <div class="logo-wrap">
+            <div class="logo">
+                <a href="http://www.hzscbg.com"><img src="../public/images/logo.svg" alt=""></a>
+            </div>
+            <div class="mobile-icon-nav" id="mobile-icon-nav">
+                <i></i>
+            </div>
+        </div>
+    </div>
+    <div class="menu" id="menu">
+        <div class="container">
+            <ul>
+                <% data.menus.forEach(function(item){ %>
+                <li><a href="<%=item.link%>"><%=item.name%></a></li>
+                <% }) %>
+            </ul>
+        </div>
+    </div>
+</header>

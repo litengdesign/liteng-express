@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="../public/theme/hz-ricoh/css/app.css">
+<link rel="stylesheet" href="../public/css/bootstrap.css">
+<header>
+    <div class="container">
+      <div class="row">
+        <div class="top col-md-12">
+            <span>一站式办公设备租赁公司</span>
+        </div>
+        <div class="logo-wrap col-md-3">
+            <div class="logo">
+                <a href="http://www.hzscbg.com"><img src="../public/theme/hz-ricoh/images/logo.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="menu col-md-9" id="menu">
+            <ul>
+                <% data.menus.forEach(function(item){ %>
+                <li><a href="<%=item.link%>"><%=item.name%></a></li>
+                <% }) %>
+                <li>
+                    <span class="phone">
+                        18989478911
+                    </span>
+                </li>
+            </ul>
+        
+            <!-- 产品分类 -->
+            <ul class="pro-category">
+                <% data.categorys.forEach(function(item){ %>
+                <li><a href="/productList?category=<%=item.id%>"><%=item.name%></a>
+                </li>
+                <% }) %>
+            </ul>
+        </div>
+      </div>
+    </div>
+</header>
