@@ -382,12 +382,20 @@ a:hover{
 .pannel .topList.postList li{
     width: 100%;
     display: inline-block;
+    margin-bottom: 1.5em;
+    padding-right: 1em;
 }
 .pannel  .topList.postList li .thumb-wrap{
     width: 30%;
 }
 .pannel  .topList.postList li .description{
     width: 66%;
+}
+.pannel .topList.postList li .name{
+    font-weight: 700;
+}
+.pannel .topList.postList li .desc{
+    font-size: 12px;
 }
 .pannel .title{
     font-size: 24px;
