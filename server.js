@@ -53,7 +53,7 @@ const menuRouter = require('./routers/menuRouter')
 app.use('/', [homeRouter, productsRouter, postsRouter, categoryRouter, userRouter, menuRouter]);
 
 //设置视图路经
-app.set('views', path.join(__dirname, 'views/hzscbg.com'))
+app.set('views', path.join(__dirname, 'views/hz-ricoh.com'))
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
