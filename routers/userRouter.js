@@ -11,5 +11,5 @@ router.post('/api/auth',userController.auth)
 
 router.get('/api/logout', userController.logout)
 
-router.get('/api/me', authenticate, userController.me)
+router.get('/api/me', userController.me)
 module.exports = router; 

@@ -10,5 +10,5 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
 app.get('/', (req, res) => res.render('index', { data: { title:'hello'}}))
-
+app.use('/v1/api', express.static('public'));
 app.listen(3000, () => console.log('Example app listening on port 3000!'))

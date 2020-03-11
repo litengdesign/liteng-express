@@ -1,11 +1,11 @@
 const express = require('express')
 const router = express.Router()
 const categoryController = require('../controllers/categoryController')
-
+const authenticate = require('../middlewares/authenticate')
 router.route('/category')
-    .get(categoryController.index)
+    .get(authenticate,categoryController.index)
 // api
-router.route('/api/categoryManage/list').get(categoryController.list); //列表
+router.route('/api/categoryManage/list').get(authenticate,categoryController.list); //列表
 router.route('/api/categoryManage/add').post(categoryController.store); //新增
 
 router.route('/api/categoryManage/findOne/:id').get(categoryController.show); //查询
