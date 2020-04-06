@@ -1,0 +1,272 @@
+<div>
+    <h3>
+        方案概述
+    </h3>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">该智慧燃气供用气物联网平台是利用</span><a href="http://www.mb-automation.com"><span style="font-size: 15px; color: rgb(0, 56, 132); text-decoration-line: underline;">自动化监控</span></a><span style="font-size: 15px; color: rgb(51, 51, 51);">和信息管理平台对供用气全过程各环节的数据进行实时监控、展示和分析，帮助管理人员及时掌握供用气系统的实际运行状况，为供气安全管理提出依据或实施参考方案，在满足用气需求的同时，力求减少事故风险、防患于未然，并实施优化控制。</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">通过设备智能接入、关键数据上报、实时消息展现、智能告警通知、数据智能分析等核心功能，满足燃气行业海量智能设备全数据类型的接入，对于生产异常及时通知、对生产运行数据进行深度挖掘，同时，可以完成GPS巡线管理、视频接入等内容，将多个系统进行深度融合，消除信息孤岛，并且实现多个系统之间的联动，对于企业的日常管理极为方便。</span>
+</div>
+<div yne-bulb-block="todo" yne-bulb-checked="false" id="6680-1585484027698" style="display: table; line-height: 1.75; font-size: 14px;">
+    <div style="border: 1px solid rgb(187, 187, 187); display: inline-flex; height: 1em; line-height: 1; position: relative; width: 1em;"></div>
+    <div yne-bulb-todo-content="" style="display: table-cell; word-break: break-word; padding-left: 8px; width: 100%;">
+        <span style="font-size: 15px; color: rgb(51, 51, 51);">本系统部署在云平台上，依托明勃</span><a href="http://www.mb-automation.com/product/software.html"><span style="font-family: Arial; color: rgb(42, 100, 150); font-weight: bold;">Vibrant-HMI11.0</span></a><span style="font-size: 15px; color: rgb(51, 51, 51);">自动化监控和信息管理平台的数据通信、数据存储、画面展示、GIS、视频、报表、编程、集成互联等功能，实现了对各种不同业务系统的数据的归档、分析与联动。同时，布局企业的大数据应用，为今后燃气公司的精细化管理打下坚实的基础。</span>
+    </div>
+</div>
+<div>
+    <span style="font-size: 18px; color: rgb(51, 51, 51); font-weight: bold;">方案架构</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">物联网平台中采集了多种类、大批量的数据，数据有来源于燃气门站或者调配站的各类PLC或DCS，也有来源于居民小区或管线的低功耗设备，还有第三方平台的数据，在云端部署的明勃</span><a href="http://www.mb-automation.com/product/software.html"><span style="font-family: Arial; color: rgb(42, 100, 150); font-weight: bold;">Vibrant-HMI11.0</span></a><span style="font-size: 15px; color: rgb(51, 51, 51);">通过物联网专有驱动、各种PLC驱动、第三方的API等方式采集各类数据。</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">物联网平台部署于云端，无需硬件投入，不只是节省了硬件费用，而且保证了平台的高性能、高可用性和高扩展性，只需要简单配置，便可将明勃</span><a href="http://www.mb-automation.com/product/software.html"><span style="font-family: Arial; color: rgb(42, 100, 150); font-weight: bold;">Vibrant-HMI11.0</span></a><span style="font-size: 15px; color: rgb(51, 51, 51);">部署于云端，使得明勃电气强大的数据采集、分析功能、移动办公功能如虎添翼。</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">明勃</span><a href="http://www.mb-automation.com/product/software.html"><span style="font-family: Arial; color: rgb(42, 100, 150); font-weight: bold;">Vibrant-HMI11.0</span></a><span style="font-size: 15px; color: rgb(51, 51, 51);">对于采集到的数据进行深入分析，将分析结果进行展示并通知给管理人员，同时通过集成互联功能将数据提供给其他系统，让企业的各种数据平台融合交互，为企业的运营生产提供保障。</span>
+</div>
+<div yne-bulb-block="image" style="float: none;">
+    <img alt="" data-media-type="image" src="//note.youdao.com/src/90C650C1F0394A11A7A96065133CDB11" style="width: 620px;"/>
+</div>
+<p style="white-space: pre-wrap; line-height: 1.75; font-size: 14px;">
+    <span style="font-size: 18px; color: rgb(51, 51, 51); font-weight: bold;"><img src="http://www.mb-automation.com/uploads/20200329/1.jpeg" _src="http://www.mb-automation.com/uploads/20200329/1.jpeg"/></span>
+</p>
+<p style="white-space: pre-wrap; line-height: 1.75; font-size: 14px;">
+    <span style="font-size: 18px; color: rgb(51, 51, 51); font-weight: bold;">系统主要功能</span>
+</p>
+<div>
+    <span style="font-size: 15px; color: rgb(62, 62, 62);">部署在云平台上的智慧燃气供用气物联网平台主要包含数据智能采集、数据智能分析、数据动态展示、智能告警通知、移动办公等功能。</span>
+</div>
+<div>
+    <span style="font-size: 11px; color: rgb(255, 255, 255); background-color: rgb(142, 201, 101);">1</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(62, 62, 62);">数据智能采集：通过一系列物联网专用协议和常规设备协议采集燃气门站、分输站、储配站、加气站、调压站等重要环节数据，保证了燃气输配和使用安全，实现了数据清晰可控。</span>
+</div>
+<div>
+    <span style="font-size: 11px; color: rgb(255, 255, 255); background-color: rgb(142, 201, 101);">2</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(62, 62, 62);">数据智能分析：包括量程匹配分析、用量异常分析、压力异常分析、夜间泄漏分析、报警分析等不同维度的分析，是燃气企业优化负荷结构、提高管网综合效率和争取企业最大盈利空间的主要手段之一，也是燃气企业可持续发展的重要动力和源泉。</span>
+</div>
+<div>
+    <span style="font-size: 11px; color: rgb(255, 255, 255); background-color: rgb(142, 201, 101);">3</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(62, 62, 62);">数据动态展示：展示了燃气站场、管网等实时数据，并通过报表、曲线等图形控件动态、灵活的呈现出来，深入联动了视频系统与GIS系统，可以实时查看现场的设备位置信息和视频信息。</span>
+</div>
+<div>
+    <span style="font-size: 11px; color: rgb(255, 255, 255); background-color: rgb(142, 201, 101);">4</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(62, 62, 62);">智能告警通知：可以通过短信、邮件、微信等方式把生产数据或者报警数据通知给企业管理人员，管理人员通过手机、平板或者浏览器就可以得知所有关心的数据。也可以通过webservice、opc、odbc等接口把数据传送给其他平台。</span>
+</div>
+<div>
+    <span style="font-size: 11px; color: rgb(255, 255, 255); background-color: rgb(142, 201, 101);">5</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(62, 62, 62);">移动办公：平台支持手机端和web端的访问，管理人员即使不在办公室，也可以随时随地办公。</span>
+</div>
+<div yne-bulb-block="image" style="float: none;">
+    <img alt="" data-media-type="image" src="//note.youdao.com/src/14EED08F02DB47FA83BAD4059055D20C" style="width: 620px;"/>
+</div>
+<p style="white-space: pre-wrap; line-height: 1.75; font-size: 14px;">
+    <span style="font-size: 18px; color: rgb(51, 51, 51); font-weight: bold;"><img src="http://www.mb-automation.com/uploads/20200329/2.png" _src="http://www.mb-automation.com/uploads/20200329/2.png"/></span>
+</p>
+<p style="white-space: pre-wrap; line-height: 1.75; font-size: 14px;">
+    <span style="font-size: 18px; color: rgb(51, 51, 51); font-weight: bold;">软件应用</span>
+</p>
+<div>
+    <span style="font-size: 17px; color: rgb(51, 51, 51); font-weight: bold;">数据智能采集功能</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(249, 110, 87); font-weight: bold;">（1）视数融合，全方位监控</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">物联网平台主要对各场站、工商业用户、调压站、阀门井等关键设备全方位远程监控（有线、无线），实时采集现场设备的各类数据。</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">平台依托于明勃</span><a href="http://www.mb-automation.com/product/software.html"><span style="font-family: Arial; color: rgb(42, 100, 150); font-weight: bold;">Vibrant-HMI11.0</span></a><span style="font-size: 15px; color: rgb(51, 51, 51);">强大的设备通信能力，支持三千多种数据协议，支持MQTT、CoAP、SM828L等物联网设备协议，且可以定制开发专用协议，能和常见的PLC、智能模块、仪器仪表、运动控制器、变频控制器、板卡、DCS等通过各种通信接口直接进行数据采集和控制，完美解决了燃气行业的设备采集和数据传输问题。</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">明勃电气支持视频和数据的深度联动，改变了传统燃气行业视频和数据并线运行，没有融合情况。比如在燃气调配站，压力数据可以联动附近的视频云台，一旦压力发生异常，即可转动摄像头到合适的位置进行拍照录像，固化证据，方便事后排查，实现视数融合，全方位监控。</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">平台中还有部分数据来源于其他系统平台，明勃</span><a href="http://www.mb-automation.com/product/software.html"><span style="font-family: Arial; color: rgb(42, 100, 150); font-weight: bold;">Vibrant-HMI11.0</span></a><span style="font-size: 15px; color: rgb(51, 51, 51);">可以通过API方便快速的获取这部分数据，可以通过内置网关功能将这部分数据写入PLC或者其他运算模块中参与运算，实现智慧物联，全方位采集控制。</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(249, 110, 87); font-weight: bold;">（2）快速诊断，精准控制</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">物联网平台借助明勃电气的设备通信功能，实时获取到设备的通讯状态，统计出通信错误数和错误率，从而快速诊断出设备故障。如果设备故障短时间不可恢复，需要更换，可以停止异常设备通信，等现场人员更新设备之后再启用设备，使得整个数据采集功能更加稳健。</span>
+</div>
+<div yne-bulb-block="image" style="text-align: center; float: none;">
+    <img alt="" data-media-type="image" src="//note.youdao.com/src/E92EEA955382436993C86FC06D048ED6" style="width: 100px;"/>
+</div>
+<div>
+    <span style="font-size: 17px; color: rgb(255, 255, 255); background-color: rgb(71, 193, 168); font-weight: bold;">2</span>
+</div>
+<div>
+    <span style="font-size: 17px; color: rgb(51, 51, 51); font-weight: bold;">数据智能分析功能</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">数据智能分析功能可以根据算法对采集的各种数据进行智能化分析，比如进行智能用气分析、量程分析、压力分析、温度分析、夜间用量分析等。</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(71, 193, 168); font-weight: bold;">（1）量程匹配分析</span>
+</div>
+<p style="white-space: pre-wrap; line-height: 1.75; font-size: 14px;">
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">根据气表的流量分析，分析过载情况、极小量情况，结合气表参数，分拣出大表小用、小表大用等情况，然后建议改用更加适合的气表规格型号，使气表时刻处于最佳工作状态。</span>
+</p>
+<p style="white-space: pre-wrap; line-height: 1.75; font-size: 14px;">
+    <span style="font-size: 15px; color: rgb(51, 51, 51);"><img src="http://www.mb-automation.com/uploads/20200329/3.jpeg" _src="http://www.mb-automation.com/uploads/20200329/3.jpeg"/></span>
+</p>
+<div yne-bulb-block="image" style="text-align: center; float: none;">
+    <img alt="" data-media-type="image" src="//note.youdao.com/src/D2077F2A7EB640A2BA02B29C479108AF" style="width: 620px;"/>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(71, 193, 168); font-weight: bold;">（2）用量异常分析</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">根据气表的用量分析出日用量与关键参数（最低耗气量、日额定用量）的关系，筛选用量异常单位，针对连续x天以上越限单位，进行安检提示。</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(71, 193, 168); font-weight: bold;">（3）温压异常分析</span>
+</div>
+<p style="white-space: pre-wrap; line-height: 1.75; font-size: 14px;">
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">对于过压或者低压的节点进行分析</span><span style="color: rgb(51, 51, 51);">，通过对压力分级，计算流量计处于各阶段的时间，形成压力分析表，对于时间压力异常的用户进行安检提示。</span>
+</p>
+<p style="white-space: pre-wrap; line-height: 1.75; font-size: 14px;">
+    <span style="color: rgb(51, 51, 51);"><img src="http://www.mb-automation.com/uploads/20200329/4.jpeg" _src="http://www.mb-automation.com/uploads/20200329/4.jpeg"/></span>
+</p>
+<div yne-bulb-block="image" style="text-align: center; float: none;">
+    <img alt="" data-media-type="image" src="//note.youdao.com/src/3A131AB1AA8241E29C1D9D5872E7C1E3" style="width: 620px;"/>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(71, 193, 168); font-weight: bold;">（4）夜间泄露分析</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">通过最小流量夜间测试数据，检测各个节点的泄露情况，查询所选区域内气表用气量超出最小值的数据，对结果进行分析，对异常夜间过气用户进行安检提示。</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(71, 193, 168); font-weight: bold;">（5）用户用气分析</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">根据用户的用气量，分析用气规律，分析用户的异常情况和报警情况，提供入户安检的建议或整改方案。</span>
+</div>
+<div yne-bulb-block="image" style="text-align: center; float: none;">
+    <img alt="" data-media-type="image" src="//note.youdao.com/src/E182DD1756014CF78E1CDA7E8C130A53" style="width: 620px;"/>
+</div>
+<p style="white-space: pre-wrap; line-height: 1.75; font-size: 14px;">
+    <span style="font-size: 15px; color: rgb(51, 51, 51);"><span style="text-decoration:underline;"><img src="http://www.mb-automation.com/uploads/20200329/5.jpeg" _src="http://www.mb-automation.com/uploads/20200329/5.jpeg"/></span><br/></span>
+</p>
+<p style="white-space: pre-wrap; line-height: 1.75; font-size: 14px;">
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">明勃电气平台提供强大的C#二次编程能力，功能和执行效率更高，算法的实现更为简单。通过编程做到深度挖掘分析数据，达到现场更安全、耗能更少、产值更大的目的。</span>
+</p>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">在这些分析中，包含有企业对于数据的核心算法，这些算法作为企业的软资产更需要有安全可靠的方式来保护，明勃电气提供的动态链接库导入功能完美的解决了这个问题。在明勃电气编程中，可以将封装了核心算法的动态链接库当作“黑盒子“来使用，在保证了运算效率的基础上保护了企业的知识产权和核心信息。</span>
+</div>
+<div yne-bulb-block="image" style="text-align: center; float: none;">
+    <img alt="" data-media-type="image" src="//note.youdao.com/src/E92EEA955382436993C86FC06D048ED6" style="width: 100px;"/>
+</div>
+<div>
+    <span style="font-size: 17px; color: rgb(255, 255, 255); background-color: rgb(255, 129, 36); font-weight: bold;">3</span>
+</div>
+<div>
+    <span style="font-size: 17px; color: rgb(51, 51, 51); font-weight: bold;">数据智能分析功能</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">燃气公司是高危行业，燃气管网及设施又是城市的基础设施，分布在城市的大街小巷，千家万户，而且绝大多数燃气管道是隐蔽工程，且相邻管线错综复杂。庞大的燃气输配系统的任何一段管道、一个设施发生燃气泄露，都将发生事故，给企业及人民生命财产造成巨大的损失。在物联网平台上数据可依托明勃电气强大的画面功能进行展示，可以结合GIS功能、视频功能、报表曲线等实现数据实时、高效的分析展示。</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(255, 129, 36); font-weight: bold;">（1）画面展示</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">燃气供用气物联网平台可以显示整个输气管网和各站的动态工艺流程，支持多种数据展示形式和多种数据分析方式。采用多屏展示技术，允许操作员在工作时操作多幅画面，具有大画面导航和缩放等功能。</span>
+</div>
+<div yne-bulb-block="image" style="text-align: center; float: none;">
+    <img alt="" data-media-type="image" src="//note.youdao.com/src/C2ECF3F5A5B94F1180C3FBDC08292B53" style="width: 620px;"/>
+</div>
+<p style="white-space: pre-wrap; line-height: 1.75; font-size: 14px;">
+    <span style="font-size: 15px; color: rgb(255, 129, 36); font-weight: bold;"><img src="http://www.mb-automation.com/uploads/20200329/6.jpeg" _src="http://www.mb-automation.com/uploads/20200329/6.jpeg"/></span>
+</p>
+<p style="white-space: pre-wrap; line-height: 1.75; font-size: 14px;">
+    <span style="font-size: 15px; color: rgb(255, 129, 36); font-weight: bold;">（2）GPS巡线管理</span>
+</p>
+<p style="white-space: pre-wrap; line-height: 1.75; font-size: 14px;">
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">在该燃气供用气物联网平台上，深度集成GIS地理信息系统，结合GPS全球定位系统实现对巡线人员、车辆的位置监控，并利用GPRS数据传输技术将实时信息传输到系统前台，从而实现对位置的实时监控，巡线员也可利用巡线终端将现场发现的隐患信息实时上传，可帮助用户有效的解决巡线工作的问题。</span>
+</p>
+<p style="white-space: pre-wrap; line-height: 1.75; font-size: 14px;">
+    <span style="font-size: 15px; color: rgb(51, 51, 51);"><img src="http://www.mb-automation.com/uploads/20200329/7.jpeg" _src="http://www.mb-automation.com/uploads/20200329/7.jpeg"/></span>
+</p>
+<div yne-bulb-block="image" style="text-align: center; float: none;">
+    <img alt="" data-media-type="image" src="//note.youdao.com/src/5B3528FA562C48169A4F170481B14B9A" style="width: 620px;"/>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(255, 129, 36); font-weight: bold;">（3）视频监控</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">该燃气供用气物联网平台利用明勃电气的特色创新设计，深度集成了视频监控功能，不但能大大节省硬件投资和部署空间，更有价值的是，把数据监控和图像监控两个系统合二为一，并且进行深度融合，弥补了在一些特定场景下纯数据监控或者纯视频监控系统或者两者独立存在的各种不足。</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">利用安装在监视目标区域的摄像机对生产设备和环境进行监控和录像，将被监视目标的动态图像传输到平台中。被授权的值班人员可对远程摄像机的云台进行预置和控制，实现对摄像机视角、方位、焦距、光圈、景深的调整；可以单画面、多面画等模式任意调看图像；支持对云台、镜头的控制命令和图像切换等命令；对站内每个摄像头进行轮巡，对于有预置位的摄像头其每个预置位都可以参与轮巡，轮巡的顺序和时间间隔可以设定。</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(255, 129, 36); font-weight: bold;">（4）其他功能</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">报警管理：系统通过简单的设置可产生不同级别的报警，能够对多种参数提供报警功能，如压力、流量、温度等，并能够通过简单的操作可随时改变报警上下限值。</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">报表曲线展示：数据可以实时展示在报表中，或者以曲线的形式展示，并支持历史数据查询。报表的格式和内容可根据要求进行自定义设置，也可由系统自动生成，报表查询时间可灵活设置，报表内容可以图文混排。</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">人员管理：系统对不同部门和岗位的人员进行分类管理，对每个人员有详细的描述，并赋予不同的权限，对于不同的操作者，具有相应权限的人员才能使用和控制，避免发生误操作。</span>
+</div>
+<div yne-bulb-block="image" style="text-align: center; float: none;">
+    <img alt="" data-media-type="image" src="//note.youdao.com/src/E92EEA955382436993C86FC06D048ED6" style="width: 100px;"/>
+</div>
+<div>
+    <span style="font-size: 17px; color: rgb(255, 255, 255); background-color: rgb(166, 91, 203); font-weight: bold;">4</span>
+</div>
+<div>
+    <span style="font-size: 17px; color: rgb(51, 51, 51); font-weight: bold;">智能告警通知</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">该燃气供用气物联网平台具有众多接口，在正常运行或者异常发出时，可根据设置的信息进行数据或者报警的推送，通过OPC服务、WebService服务等对外提供数据交换和功能访问，或经中间文件、EXCEL表格和数据库表格进行中转对外互换数据，以及通过短信、微信和电子邮件和外部相关人员的数据交互等。这些手段还可以不断扩充，让各个系统平台不再独立。</span>
+</div>
+<p style="white-space: pre-wrap; line-height: 1.75; font-size: 14px;">
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">明勃电气支持微信，也支持手机短信功能。不管何时何地，管理人员都可以通过这些手段快速便捷地浏览自己关心的数据和报警信息，并可以下发指令，控制设备。</span>
+</p>
+<p style="white-space: pre-wrap; line-height: 1.75; font-size: 14px;">
+    <span style="font-size: 15px; color: rgb(51, 51, 51);"><img src="http://www.mb-automation.com/uploads/20200329/8.jpeg" _src="http://www.mb-automation.com/uploads/20200329/8.jpeg"/></span>
+</p>
+<div yne-bulb-block="image" style="text-align: center; float: none;">
+    <img alt="" data-media-type="image" src="//note.youdao.com/src/C24A3A45695646DC808CC9104F1D718D" style="width: 100px;"/>
+</div>
+<div yne-bulb-block="image" style="text-align: center; float: none;">
+    <img alt="" data-media-type="image" src="//note.youdao.com/src/E92EEA955382436993C86FC06D048ED6" style="width: 100px;"/>
+</div>
+<div>
+    <span style="font-size: 17px; color: rgb(255, 255, 255); background-color: rgb(95, 156, 239); font-weight: bold;">5</span>
+</div>
+<div>
+    <span style="font-size: 17px; color: rgb(51, 51, 51); font-weight: bold;">移动办公</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">该燃气供用气物联网平台支持移动APP、网页登录查看控制所有权限内的画面和数据，可以通过多种方式推送数据。使管理者摆脱地域和时间的束缚，实现7x24x365的服务覆盖，管理者可以随时随地查看管网及站场运行情况。</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(95, 156, 239); font-weight: bold;">（1）网页浏览</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">可通过浏览器查阅系统的实时信息、历史信息、各种图形信息、设备运行工况、生产统计报表等，实现远程生产监视。WEB浏览界面与实时系统界面风格一致，具有相同的画面显示、画面操作和画面的快照打印等功能，且报警信息也能实时发布，使得在外地出差和家庭办公等情况下也能及时掌握系统的运行状况。</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(95, 156, 239); font-weight: bold;">（2）手机APP</span>
+</div>
+<div>
+    <span style="font-size: 15px; color: rgb(51, 51, 51);">系统提供了手机APP功能，可方便监控人员随时随地查看管网运行状态，支持ios、Microsoft、安卓等系统。</span>
+</div>

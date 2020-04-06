@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="360-site-verification" content="b8a5ce0a3940b7f00db1ae8b3ef3aca1" />
+    <title>工厂离散设施控制系统方案专家 - 上海明勃电气自动化</title>
+    <meta name="keywords"
+        content="SCADA控制系统,MES控制系统,电气控制柜,盘柜成套,PLC控制柜,西门子控制柜,PLC编程,AB系统集成,西门子系统集成,三菱系统集成,GE系统集成,PLC软件编程,盘柜成套,控制系统集成,自动化设备产线,路政试验类设备">
+    <meta name="description"
+        content="上海明勃电气自动化有限公司，是一家专业从事工业自动化系统集成设备的高新技术企业。公司主要从事机电一体化设备、自动化流水线、可编成环试非标设备及工业产线耗材的售前咨询、设计、加工、安装、调试和售后服务等。">
+        <script src="../public/lib/jquery.min.js"></script>
+        <script src="../public/lib/slides.min.jquery.js"></script>
+        <script src="../public/lib/jquery.fancybox2.js"></script>
+        <link rel="stylesheet" href="../public/theme/mb6automation/css/css.css">
+        <link rel="stylesheet" href="../public/lib/jquery.fancybox2.css">
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var d = new Date();
+        var week = d.getDay();
+        switch (d.getDay()) {
+            case 1: week = "<img src='http://www.juyi.cn/data/product/20130306100242776.jpg' class='ac_bgimage' />"; break;
+            case 2: week = "<img src='http://www.juyi.cn/data/product/20130306100306574.jpg' class='ac_bgimage' />"; break;
+            case 3: week = "<img src='http://www.juyi.cn/data/product/20130306100455491.jpg' class='ac_bgimage' />"; break;
+            case 4: week = "<img src='http://www.juyi.cn/data/product/20130306101121593.jpg' class='ac_bgimage' />"; break;
+            case 5: week = "<img src='http://www.juyi.cn/data/product/20130306101100318.jpg' class='ac_bgimage' />"; break;
+            case 6: week = "<img src='http://www.juyi.cn/data/product/20130306100820698.jpg' class='ac_bgimage' />"; break;
+            default: week = "<img src='http://www.juyi.cn/data/product/20130306101142416.jpg' class='ac_bgimage' />";
+        }
+
+        ac_background.innerHTML = week;
+
+        $('.photo100,.photo101').fadeIn(800);
+
+        $('.fancybox').fancybox();
+
+    });
+
+</script>
+
+<script src="../public/lib/slides.min.jquery.js"></script>
+<script>
+    $(function () {
+        $('#slides').slides({
+            preload: true,
+            preloadImage: '../public/theme/mb6automation/images/loading.gif',
+            play: 5000,
+            pause: 2500,
+            hoverPause: true
+        });
+    });
+</script>
+</head>
+<body style=" background:none">
+    <div id="ac_background" class="ac_background" style="top:0;"></div>
+    <div class="indexmian">
+        <%- include public/ad1.html %>
+        <div class="header">
+
+            <div class="logo"><a href="index.asp" title="巨一集团有限公司"><img
+                        src="../public/theme/mb6automation/images/logo.png" /></a></div>
+
+            <div class="detail"><span class="right"><a href="http://weibo.com/OOMEE"
+                        target="_blank"><strong>官方微博</strong></a>　　<a href="#">中文版</a>　<a href="#">English</a></span><img
+                    src="../public/theme/mb6automation/images/pic001.png" style="float:right; padding-right:5px;" /></div>
+
+            <div class="nav" style="padding-top:28px;">
+
+
+                <% data.menus.forEach(function(item){ %>
+                <li><a class="title001" href="<%=item.link%>"><%=item.name%></a></li>
+                <% }) %>
+            </div>
+
+        </div>
+        <div class="photo100">
+            <a><img src="../public/theme/mb6automation/images/pic004.jpg" class="photo002" /></a>
+            <a><img src="../public/theme/mb6automation/images/pic001.jpg" class="photo003"/></a>
+            <a href="network.asp"><img src="../public/theme/mb6automation/images/pic003.jpg" class="photo004"/></a>
+        </div>
+        <div class="photo101">
+            <img src="../public/theme/mb6automation/images/pic005.jpg" class="photo005" />
+            <a class="fancybox fancybox.iframe" href="video.asp"><img src="../public/theme/mb6automation/images/pic002.jpg" class="photo006" /></a>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="footer">
+            <div id="slides">
+                <div class="photo001">
+                    <a href="news.asp"><img
+                            src="../public/theme/mb6automation/images/pic002.png" /></a></div>
+                <a href="#" class="prev"><img src="../public/theme/mb6automation/images/pic004.png" width="4" height="7"
+                        alt="Arrow Prev"></a>
+                <a href="#" class="next"><img src="../public/theme/mb6automation/images/pic007.png" width="4" height="7"
+                        alt="Arrow Next"></a>
+                <div class="slides_container">
+                    <% data.postsTop.forEach(function(item){ %>
+                        <a href="/post/<%=item._id%>">
+                            <div class="text002"><%=item.name%></div>
+                            <div class="text003"><%=item.description%></div>
+                        </a>
+                    <%})%>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="float:left; width:100%;">
+        <div class="text001">版权所有：明勃股份 <a
+                href="http://www.beian.miit.gov.cn/" target="_blank">沪ICP备14038107号</a></div>
+    </div>
+    <div style="position:absolute; right:10px; bottom:45px;"></div>
+    </div>
+</body>
+</html>

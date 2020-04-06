@@ -3,8 +3,8 @@ const path = require('path');
 const morgan = require ('morgan');
 const multer = require('multer');
 const app = express();
-const origin = 'http://www.hzscbg.com/';
-// const origin = 'http://localhost:4200/';
+const origin = 'http://www.hz-ricoh.com/';
+// const origin = 'http://localhost:4201/';
 
 
 //设置允许跨域访问该服务.

@@ -115,6 +115,16 @@ const findById = (request, response) => {
         response.send(documents)
     })
 }
+//按照别处
+const findByName = (request, response) => {
+    var name = require('mongodb').name;
+    var whereArgs = {
+        name: name
+    };
+    Post.findOne(whereArgs).then(documents => {
+        response.send(documents)
+    })
+}
 //更新文档根据id
 const update = (request, response) => {
     const id = request.body.id;

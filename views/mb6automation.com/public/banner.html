@@ -1,0 +1,52 @@
+<div class="container">
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-2 banner-text">
+                        <h4>办公室打印/办公服务</h4>
+                        <h2>通过技术实现未来</h2>
+                        <h4>
+                            理光提供一系列成像设备，如MFP，打印机和其他办公用硬件。理光还提供完整的解决方案，从提供软件和消耗品到构建和支持信息技术环境，再到管理网络和提供用户支持。
+                        </h4>
+                        <button class="btn btn-lg">了解更多</button>
+                    </div>
+                    <div class="col-md-4 banner-img">
+                        <img src="../public/theme/hz-ricoh/images/banner01.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-2 banner-text">
+                        <h4>办公室打印/办公服务</h4>
+                        <h2>通过技术实现期望</h2>
+                        <h4>
+                            理光提供一系列成像设备，如MFP，打印机和其他办公用硬件。理光还提供完整的解决方案，从提供软件和消耗品到构建和支持信息技术环境，再到管理网络和提供用户支持。
+                        </h4>
+                        <button class="btn btn-lg">了解更多</button>
+                    </div>
+                    <div class="col-md-4 banner-img">
+                        <img src="../public/theme/hz-ricoh/images/banner01.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+<script src="/public/lib/swiper/js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        speed: 1000,
+        parallax: true,
+        autoplay: {
+            delay: 5000,//1秒切换一次
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+</script>

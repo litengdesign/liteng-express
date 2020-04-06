@@ -28,6 +28,7 @@ const store = (request, response) => {
     const category = new Category({
         name: request.body.name,
         type: request.body.type,
+        children: request.body.children,
         seotitle: request.body.seotitle,
         seokeyworlds: request.body.seokeyworlds,
         seodescription: request.body.seodescription,
@@ -57,6 +58,7 @@ const update = (request, response) => {
     const id = request.body.id;
     const body = {
         name: request.body.name,
+        children: request.body.children,
         type: request.body.type,
         description: request.body.description,
         thumb: request.body.thumb

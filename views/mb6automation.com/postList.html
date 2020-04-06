@@ -1,0 +1,364 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <TITLE>最新资讯 - 巨一集团有限公司</TITLE>
+    <META name="keywords" content="巨一集团有限公司">
+    <META name="description" content="巨一集团有限公司">
+    <meta name="author" content="Copright © 2013 温州优谷科技有限公司 http://www.yougoo.cn" />
+    <meta name="Copyright" content="Copright © 2013 巨一集团有限公司" />
+    <link rel="SHORTCUT ICON" href="favicon.ico" />
+    <link rel="stylesheet" href="../public/theme/mb6automation/css/css.css">
+</head>
+<body>
+    <div class="indexmian">
+        <%- include public/header.html %>
+    </div>
+
+    <div class="main">
+
+        <div id="wapper">
+
+            <div class="detail002">
+
+                <img src="images/pic018.png" style="float:left; padding-top:10px; padding-left:7px;" />
+
+                <SCRIPT type=text/javascript>
+    function addEvent(obj,evtType,func,cap){
+    cap=cap||false;
+    if(obj.addEventListener){
+    obj.addEventListener(evtType,func,cap);
+    return true;
+    }else if(obj.attachEvent){
+    if(cap){
+    obj.setCapture();
+    return true;
+    }else{
+    return obj.attachEvent("on" + evtType,func);
+    }
+    }else{
+    return false;
+    }
+    }
+    function getPageScroll(){
+    var xScroll,yScroll;
+    if (self.pageXOffset) {
+    xScroll = self.pageXOffset;
+    } else if (document.documentElement && document.documentElement.scrollLeft){
+    xScroll = document.documentElement.scrollLeft;
+    } else if (document.body) {
+    xScroll = document.body.scrollLeft;
+    }
+    if (self.pageYOffset) {
+    yScroll = self.pageYOffset;
+    } else if (document.documentElement && document.documentElement.scrollTop){
+    yScroll = document.documentElement.scrollTop;
+    } else if (document.body) {
+    yScroll = document.body.scrollTop;
+    }
+    arrayPageScroll = new Array(xScroll,yScroll);
+    return arrayPageScroll;
+    }
+    function GetPageSize(){
+    var xScroll, yScroll;
+    if (window.innerHeight && window.scrollMaxY) {
+    xScroll = document.body.scrollWidth;
+    yScroll = window.innerHeight + window.scrollMaxY;
+    } else if (document.body.scrollHeight > document.body.offsetHeight){
+    xScroll = document.body.scrollWidth;
+    yScroll = document.body.scrollHeight;
+    } else {
+    xScroll = document.body.offsetWidth;
+    yScroll = document.body.offsetHeight;
+    }
+    var windowWidth, windowHeight;
+    if (self.innerHeight) {
+    windowWidth = self.innerWidth;
+    windowHeight = self.innerHeight;
+    } else if (document.documentElement && document.documentElement.clientHeight) {
+    windowWidth = document.documentElement.clientWidth;
+    windowHeight = document.documentElement.clientHeight;
+    } else if (document.body) {
+    windowWidth = document.body.clientWidth;
+    windowHeight = document.body.clientHeight;
+    }
+    if(yScroll < windowHeight){
+    pageHeight = windowHeight;
+    } else {
+    pageHeight = yScroll;
+    }
+    if(xScroll < windowWidth){
+    pageWidth = windowWidth;
+    } else {
+    pageWidth = xScroll;
+    }
+    arrayPageSize = new Array(pageWidth,pageHeight,windowWidth,windowHeight)
+    return arrayPageSize;
+    }
+    var AdMoveConfig=new Object();
+    AdMoveConfig.IsInitialized=false;
+    AdMoveConfig.ScrollX=0;
+    AdMoveConfig.ScrollY=0;
+    AdMoveConfig.MoveWidth=0;
+    AdMoveConfig.MoveHeight=0;
+    AdMoveConfig.Resize=function(){
+    var winsize=GetPageSize();
+    AdMoveConfig.MoveWidth=winsize[2];
+    AdMoveConfig.MoveHeight=winsize[3];
+    AdMoveConfig.Scroll();
+    }
+    AdMoveConfig.Scroll=function(){
+    var winscroll=getPageScroll();
+    AdMoveConfig.ScrollX=winscroll[0];
+    AdMoveConfig.ScrollY=winscroll[1];
+    }
+    addEvent(window,"resize",AdMoveConfig.Resize);
+    addEvent(window,"scroll",AdMoveConfig.Scroll);
+    function AdMove(id){
+    if(!AdMoveConfig.IsInitialized){
+    AdMoveConfig.Resize();
+    AdMoveConfig.IsInitialized=true;
+    }
+    var obj=document.getElementById(id);
+    obj.style.position="absolute";
+    var W=AdMoveConfig.MoveWidth-obj.offsetWidth;
+    var H=AdMoveConfig.MoveHeight-obj.offsetHeight;
+    var x = W*Math.random(),y = H*Math.random();
+    var rad=(Math.random()+1)*Math.PI/6;
+    var kx=Math.sin(rad),ky=Math.cos(rad);
+    var dirx = (Math.random()<0.5?1:-1), diry = (Math.random()<0.5?1:-1);
+    var step = 1;
+    var interval;
+    this.SetLocation=function(vx,vy){x=vx;y=vy;}
+    this.SetDirection=function(vx,vy){dirx=vx;diry=vy;}
+    obj.CustomMethod=function(){
+    obj.style.left = (x + AdMoveConfig.ScrollX) + "px";
+    obj.style.top = (y + AdMoveConfig.ScrollY) + "px";
+    rad=(Math.random()+1)*Math.PI/6;
+    W=AdMoveConfig.MoveWidth-obj.offsetWidth;
+    H=AdMoveConfig.MoveHeight-obj.offsetHeight;
+    x = x + step*kx*dirx;
+    if (x < 0){dirx = 1;x = 0;kx=Math.sin(rad);ky=Math.cos(rad);}
+    if (x > W){dirx = -1;x = W;kx=Math.sin(rad);ky=Math.cos(rad);}
+    y = y + step*ky*diry;
+    if (y < 0){diry = 1;y = 0;kx=Math.sin(rad);ky=Math.cos(rad);}
+    if (y > H){diry = -1;y = H;kx=Math.sin(rad);ky=Math.cos(rad);}
+    }
+    this.Run=function(){
+    var delay = 10;
+    interval=setInterval(obj.CustomMethod,delay);
+    obj.onmouseover=function(){clearInterval(interval);}
+    obj.onmouseout=function(){interval=setInterval(obj.CustomMethod, delay);}
+    }
+    }
+    </SCRIPT>
+                <DIV id="ad1" style="Z-INDEX: 99999999;display:block;">
+
+                    <!--漂浮开始-->
+
+                    <div style="height:133px; line-height:30px; overflow:hidden; text-align:center;">
+                        <a href="hr.html" target="_blank"><img src="images/pic025.jpg" width="242" height="134"
+                                border="0" /></a>
+                    </div>
+
+                    <!--漂浮结束-->
+                    <DIV onclick="hidead();" style="FONT-SIZE: 9pt; CURSOR:pointer; width:242px;" align=right><img
+                            src="images/pic027.jpg" width="242" /></DIV>
+                </DIV>
+                <SCRIPT type=text/javascript>
+	<!--
+    var ad1=new AdMove("ad1");
+    ad1.Run();
+    //多组漂浮
+    //var ad1=new AdMove("ad2");
+    //ad2.Run();
+    //-->
+	function hidead()
+{document.getElementById("ad1").style.display="none";}
+    </SCRIPT>
+                <div class="detail003"><img src="images/pic001.png" width="22" height="18"
+                        style="float:left; padding-top:3px;" /><a href="http://weibo.com/OOMEE"
+                        target="_blank">官方微博</a><img src="images/pic010.png" width="26" height="25"
+                        style="float:left; padding-left:27px;" /></div>
+
+                <div class="detail004">
+                    当前位置：<a href="index.asp">首页</a> > <a href="news.asp">最新资讯</a>
+                </div>
+
+
+            </div>
+
+            <div class="company">
+
+                <div class="company_left">
+
+
+
+                    <li><a href="news.asp?ncla=1">企业动态</a></li>
+
+
+
+                    <li><a href="news.asp?ncla=2">媒体报道</a></li>
+
+
+
+                    <li><a href="news.asp?ncla=3">视频新闻</a></li>
+
+
+
+                </div>
+
+                <div class="company_right">
+
+                    <div class="detail005">
+
+                        <div class="text004">最新资讯</div>
+                        <div class="text005">News</div>
+
+                    </div>
+
+
+                    <div class="news">
+
+
+
+                        <li>
+                            <div class="text006"><a href="newslist.asp?id=156"> “看温企危中寻机”② |
+                                    日产口罩十几万只！这位温州鞋企老板说，预计年产值可新增五六千万元</a><br />2020年3月20日</div>
+                            <a href="newslist.asp?id=156"><img src="" width="200" height="150"
+                                    style="float:left;" /></a>
+                            <div class="text007">
+                                <p>&nbsp;
+                                    &ldquo;看温企危中寻机&rdquo;②&nbsp;|&nbsp;日产口罩十几万只！这位温州鞋企老板说，预计年产值可新增五六千万元
+                                    《温州商报》2020.3.16第8版
+                                    &nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;编者按：在这次战&ldquo;疫&rdquo;中，一批温州企业和温州企业家弘扬坚韧不拔、特别能创业的温州人精神，面对逆境迎难而上，迅速复工复产，努力危中寻机，为实现市委提出的&ldquo;冲刺一季度、力夺半年红、实现全年高质量&rdquo;奋力奔跑。本报继&ldquo;记者一线看复工&rdquo;后，再推&nbsp;&ldquo;看温企危中...
+                                </p>
+                            </div>
+                        </li>
+
+
+
+                        <li>
+                            <div class="text006"><a href="newslist.asp?id=155">中华工商时报：巨一集团加班加点赶订单</a><br />2020年3月20日
+                            </div>
+                            <a href="newslist.asp?id=155"><img src="" width="200" height="150"
+                                    style="float:left;" /></a>
+                            <div class="text007">
+                                <p>&nbsp;
+                                    &nbsp;
+                                    作者：《中国工商时报》2020.3.11第四版
+                                    &nbsp;
+
+                                    【本报温州讯】作为全国知名的制鞋企业、温州市鞋革协会会长单位，巨一集团有限公司自2月18日复工以来，坚持一手抓防疫，一手抓复产，千方百计把新冠肺炎疫情造成的损失夺回来。&ldquo;现在回厂员工有1000多人，接近70%。以前员工晚上八点半就下班了，现在为了赶订单都是晚上九、十点钟才下班&hellip;&hellip;&rdquo;3月6日上午九点，正在车间巡查的生产一部姜健忠厂长介绍了巨一集团当下复工复产情况。姜健忠说，受疫情阻隔，员工返厂困难。为了确保早日复工，同时保障员工利益少受损失，公...
+                                </p>
+                            </div>
+                        </li>
+
+
+
+                        <li>
+                            <div class="text006"><a href="newslist.asp?id=154">巨一集团加班加点赶订单</a><br />2020年3月20日</div>
+                            <a href="newslist.asp?id=154"><img src="" width="200" height="150"
+                                    style="float:left;" /></a>
+                            <div class="text007">
+                                <p>&nbsp;
+                                    2020年03月17日《中国质量报》A07综合新闻&nbsp;
+                                    本报讯&nbsp;（巨&nbsp;文）作为全国著名制鞋企业及温州市鞋革协会会长单位，巨一集团自2月18日复工以来，坚持一手抓防疫，一手抓复产，加班加点赶制订单，千方百计把新冠肺炎疫情造成的损失夺回来。
+                                    行走在巨一集团成型车间，眼前一片忙碌。一条条流水线，一双双欧式风格的新款凉鞋、单鞋正在线上制作、包装。楼梯口放着几桶消毒液。值勤人员手持测温枪，正在给每个员工测量体温。&ldquo;现在人手不够，流水线还没有全开。我们招了一批临时技工顶上来。所有干部也都上线干活。目前日产量已达到节前80%以上。&rdquo;该公...
+                                </p>
+                            </div>
+                        </li>
+
+
+
+                        <li>
+                            <div class="text006"><a href="newslist.asp?id=157"> 浙江工人日报：“巨一”加班加点赶订单</a><br />2020年3月20日
+                            </div>
+                            <a href="newslist.asp?id=157"><img src="" width="200" height="150"
+                                    style="float:left;" /></a>
+                            <div class="text007">
+                                <p>
+
+                                    2020年03月20日&nbsp;《浙江工人日报》第2版
+                                    　　通讯员巨文报道　&ldquo;现在回厂员工有1000多人，接近70%。为了赶订单常常晚上九十点钟才下班&hellip;&hellip;&rdquo;3月6日，巨一集团生产一部姜健忠厂长向笔者介绍了当下复工复产情况。
+                                    　　作为全国著名的制鞋企业、温州市鞋革协会会长单位，&ldquo;巨一&rdquo;自2月18日复工以来，坚持一手抓防疫、一手抓复产，千方百计把新冠肺炎疫情造成的损失夺回来。
+                                    　　姜健忠说，受疫情阻隔，员工返厂困难。为了确保早日复工，同时保障员工利益少受损失，公司不惜代价通过各种渠道接回各地员工。&ldqu...</p>
+                            </div>
+                        </li>
+
+
+
+                        <li>
+                            <div class="text006"><a href="newslist.asp?id=153"> 鞋都义工为“巨一”员工免费理发</a><br />2020年3月7日</div>
+                            <a href="newslist.asp?id=153"><img src="" width="200" height="150"
+                                    style="float:left;" /></a>
+                            <div class="text007">
+                                <p>&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ldquo;下一个，下一个，到你了。&rdquo;3月5日中午，巨一集团职工餐厅，一场&ldquo;爱心&lsquo;疫&rsquo;剪，助力复工复产&rdquo;活动正在热闹举行。6把剪刀同时开剪，几十名员工列队等候。活动受到巨一员工们热烈欢迎，现场不时传出笑声、掌声。正在巨一采访的央视记者录下了这温馨的画面。
+                                    &nbsp;&nbsp;&nbsp;&nbsp;据了解，这次活动的志愿者来自鹿城区丰门街道鞋都社区两家美容美发店，一家叫&ldquo;丽梵&rdquo;，一家叫&ldquo;好旺角&rdquo;。在疫情防...
+                                </p>
+                            </div>
+                        </li>
+
+
+
+                        <li>
+                            <div class="text006"><a href="newslist.asp?id=152"> 政府牵线，巨一“联姻”太平洋财险</a><br />2020年3月7日
+                            </div>
+                            <a href="newslist.asp?id=152"><img src="" width="200" height="150"
+                                    style="float:left;" /></a>
+                            <div class="text007">
+                                <p>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3月5日下午，在鹿城区金融办的促成下，太平洋财产保险鹿城支公司与巨一集团在巨一签署了&ldquo;复工保&rdquo;投保协议。鹿城区金融办副主任姜辉、太平洋财险鹿城支公司总经理潘章伦、巨一集团副总经理徐自挥等出席了签字仪式。
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;姜辉说，新冠疫情持续蔓延，给节后企业正常复工和员工安全带来很大的风险。区金融办联合太平洋保险，帮助全区企业投保&ldquo;复工保&rdquo;险种。徐自挥感谢区政府对企业的关爱。巨一积极响应政府号召，此次投入12万元购买...
+                                </p>
+                            </div>
+                        </li>
+
+
+
+
+                    </div>
+
+                    <div class="pages2">
+
+                        <a href=?page=2 title='下一页'><img src='/images/pic015.png' /></a><span>1/24</span><a><img
+                                src='/images/pic014.png' /></a>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="foot">
+
+        <div style="margin:0 auto; width:1002px;">
+            <div style="position:absolute; right:10px; bottom:25px;"></div>
+            <div class="footer2"><a href="#" style="color:#FFF">中文版</a>　<a href="#">English</a></div>
+
+            <div class="footer2_text">版权所有：巨一集团 技术支持：<a href="http://www.yougoo.cn" target="_blank">优谷科技</a> <a
+                    href="http://www.beian.miit.gov.cn/" target="_blank">浙ICP备11062671号-1</a></div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

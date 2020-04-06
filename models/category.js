@@ -8,7 +8,8 @@ const options = {
 const schema = new db.Schema({
     name: String,
     type: String,
-    thumb: Array
+    thumb: Array,
+    children: Array,
 }, options)
 
 const category = db.model('category', schema)
