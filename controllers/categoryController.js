@@ -15,7 +15,8 @@ const index = (request, response) => {
 //查询数据列表
 const list = (request, response) => {
     Category.find().where('type', request.query.type)
-        .then(documents => response.send(
+        .then(documents => 
+            response.send(
            {
                 total: documents.length,
                 data: documents
@@ -23,25 +24,36 @@ const list = (request, response) => {
         ))
 }
 
+
 //创建单个文档
 const store = (request, response) => {
     const category = new Category({
+        key: (new Date()).getTime(),
         name: request.body.name,
+        title: request.body.name,
         type: request.body.type,
-        seotitle: request.body.seotitle,
-        seokeyworlds: request.body.seokeyworlds,
-        seodescription: request.body.seodescription,
+        thumb: request.body.thumb,
         description: request.body.description,
-        filename: request.body.filename,
-        thumb: request.body.thumb
+        children: request.body.children,
+        parentId: request.body.parentId,
     })
-    category.save()
-        .then(document => response.send(
+    if (!request.body.parentId){
+        category.save().then(document => response.send(
             {
                 status: 1,
                 message: '新增成功！'
             }
         ))
+    }else{
+        // 根据id查找
+        Category.update({ key: request.body.parentId }, { $push: { children: category } })
+            .then(document => response.send(
+                {
+                    status: 1,
+                    message: '更新成功！'
+                }
+            ))
+    }
 }
 
 //查找文档根据关键词
@@ -57,11 +69,12 @@ const update = (request, response) => {
     const id = request.body.id;
     const body = {
         name: request.body.name,
-        type: request.body.type,
+        title: request.body.name,
         description: request.body.description,
-        thumb: request.body.thumb
+        thumb: request.body.thumb,
+        parentId: request.body.parentId,
     }
-    Category.findByIdAndUpdate(id, { $set: body }, { new: true })
+    Category.findByIdAndUpdate(id, { $set: body })
         .then(document => response.send(
             {
                 status: 1,
@@ -72,14 +85,29 @@ const update = (request, response) => {
 
 //删除文档
 const destroy = (request, response) => {
-    const id = request.params.id;
-    Category.findByIdAndRemove(id)
-        .then(document => response.send(
-            {
-                status: 1,
-                message: '删除成功！'
-            }
-        ))
+    const id = request.body.key;
+    const parentId = request.body.parentId;
+    console.log('key' + id +'parentId'+parentId)
+    if (parentId){
+        // 根据id查找
+        // Category.update({ key: request.body.parentId }, { $push: { children: category } })
+        Category.update({ key: request.body.parentId }, { $pull: { children: { key: request.body.key} } })
+            .then(document => response.send(
+                {
+                    status: 1,
+                    message: '删除成功！'
+                }
+            ))
+    }else{
+        Category.findByIdAndRemove(id)
+            .then(document => response.send(
+                {
+                    status: 1,
+                    message: '删除成功！'
+                }
+            ))
+    }
+
 }
 
 module.exports = {

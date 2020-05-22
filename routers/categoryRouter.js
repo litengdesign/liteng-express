@@ -10,6 +10,6 @@ router.route('/api/categoryManage/add').post(categoryController.store); //新增
 
 router.route('/api/categoryManage/findOne/:id').get(categoryController.show); //查询
 router.route('/api/categoryManage/update').post(categoryController.update);//更新
-router.route('/api/categoryManage/delete/:id').post(categoryController.destroy); //删除
+router.route('/api/categoryManage/delete').post(categoryController.destroy); //删除
 
 module.exports = router; 
