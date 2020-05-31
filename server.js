@@ -4,7 +4,7 @@ const morgan = require ('morgan');
 const multer = require('multer');
 const app = express();
 const origin = 'http://www.hzscbg.com/';
-// const origin = 'http://localhost:4200/';
+// const origin = 'http://localhost:4201/';
 
 
 //设置允许跨域访问该服务.
@@ -53,7 +53,7 @@ const menuRouter = require('./routers/menuRouter')
 app.use('/', [homeRouter, productsRouter, postsRouter, categoryRouter, userRouter, menuRouter]);
 
 //设置视图路经
-app.set('views', path.join(__dirname, 'views/hz-ricoh.com'))
+app.set('views', path.join(__dirname, 'views/hzscbg.com'))
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 

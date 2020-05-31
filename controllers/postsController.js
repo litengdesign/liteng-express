@@ -59,7 +59,7 @@ const store = (request, response) => {
         isTop: request.body.isTop,
         updateDate: (new Date()).getTime(),
         createTime: (new Date()).getTime(),
-        createTimeStr: (new Date()).getFullYear() + '-' + (parseInt(new Date().getMonth()) + 1) + '-' + (new Date()).getDay()
+        createTimeStr: (new Date()).getFullYear() + '-' + (parseInt(new Date().getMonth()) + 1) + '-' + (new Date()).getDate()
     })
     post.save()
         .then(document => response.send(

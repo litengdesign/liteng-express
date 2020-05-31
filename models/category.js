@@ -9,8 +9,6 @@ const schema = new db.Schema({
     type: String,
     thumb: Array,
     description: String,
-    children:Array,
-    parentId: String,
 }, options)
 
 

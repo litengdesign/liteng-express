@@ -37,23 +37,14 @@ const store = (request, response) => {
         children: request.body.children,
         parentId: request.body.parentId,
     })
-    if (!request.body.parentId){
-        category.save().then(document => response.send(
+    // 根据id查找
+    category.save().then().then(document => response.send(
             {
                 status: 1,
-                message: '新增成功！'
+                message: '更新成功！'
             }
         ))
-    }else{
-        // 根据id查找
-        Category.update({ key: request.body.parentId }, { $push: { children: category } })
-            .then(document => response.send(
-                {
-                    status: 1,
-                    message: '更新成功！'
-                }
-            ))
-    }
+
 }
 
 //查找文档根据关键词
@@ -72,7 +63,6 @@ const update = (request, response) => {
         title: request.body.name,
         description: request.body.description,
         thumb: request.body.thumb,
-        parentId: request.body.parentId,
     }
     Category.findByIdAndUpdate(id, { $set: body })
         .then(document => response.send(
@@ -85,28 +75,15 @@ const update = (request, response) => {
 
 //删除文档
 const destroy = (request, response) => {
-    const id = request.body.key;
-    const parentId = request.body.parentId;
-    console.log('key' + id +'parentId'+parentId)
-    if (parentId){
-        // 根据id查找
-        // Category.update({ key: request.body.parentId }, { $push: { children: category } })
-        Category.update({ key: request.body.parentId }, { $pull: { children: { key: request.body.key} } })
-            .then(document => response.send(
-                {
-                    status: 1,
-                    message: '删除成功！'
-                }
-            ))
-    }else{
-        Category.findByIdAndRemove(id)
-            .then(document => response.send(
-                {
-                    status: 1,
-                    message: '删除成功！'
-                }
-            ))
-    }
+    const id = request.body.id;
+    console.log(id)
+    Category.findByIdAndRemove(id)
+        .then(document => response.send(
+            {
+                status: 1,
+                message: '删除成功！'
+            }
+        ))
 
 }
 
