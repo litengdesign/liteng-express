@@ -76,7 +76,6 @@ const update = (request, response) => {
 //删除文档
 const destroy = (request, response) => {
     const id = request.body.id;
-    console.log(id)
     Category.findByIdAndRemove(id)
         .then(document => response.send(
             {
